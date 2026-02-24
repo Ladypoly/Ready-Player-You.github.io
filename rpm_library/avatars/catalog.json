@@ -1,0 +1,14 @@
+{
+  "avatars": [
+    {
+      "name": "male_default",
+      "gender": "male",
+      "file": "male_default.glb"
+    },
+    {
+      "name": "female_default",
+      "gender": "female",
+      "file": "female_default.glb"
+    }
+  ]
+}

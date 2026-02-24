@@ -1,0 +1,6110 @@
+{
+  "version": "2.0",
+  "assetTypes": {
+    "beard": {
+      "count": 36,
+      "items": [
+        {
+          "name": "beard-01",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247446",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-02",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247426",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-03",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247444",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-04",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247429",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-05",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247447",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-07",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-08",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-09",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-10",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-11",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-12",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-13",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-14",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-15",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-16",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-17",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-18",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-19",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-20",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-21",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-22",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-23",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-24",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-25",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "11007710",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-26",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "11010173",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-27",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "11010182",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-28",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "11010346",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-29",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "11010410",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-30",
+          "type": "beard",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "11010412",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-31",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "11010764",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-32",
+          "type": "beard",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "11010819",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-33",
+          "type": "beard",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "11011190",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-34",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-35",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "beard-36",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "40741901",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "beard-37",
+          "type": "beard",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        }
+      ]
+    },
+    "bottom": {
+      "count": 28,
+      "items": [
+        {
+          "name": "pants-adventure-01",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "146120161",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-adventure-01-aquaripped (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "W38-yRaRQn-vBrzq_ryYmw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-adventure-01-mountain (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "YTHgNrzXSSWmpWsXJR4Svg",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-cargo-01-blackzipper",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "x5cj70J1RXGeNupHA6-xlg",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-cargo-01-blackzipper (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "cXRIxF8WRJ6zcmj78yp3hA",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-cargo-01-whiteblueblack (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "tMz9tNHcQC-xvfs30SdAWA",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-casual-01",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "146120431",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-casual-01-american",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "7C7Hi-PUSne3CrH4GLRurw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-casual-01-blue (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "Ynui7G3tT_-jt_K0QT-nBw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-casual-01-french",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "cUwdNJLyRI-IGxqR0Qyrlw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-casual-01-italian",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "rbGTy_C0Rp-9HcOpwUQOQw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-casual-02",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "145064644",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-casual-02-black (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "3w-9BAYITyOEyrmcpgzvZg",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-casual-02-caqui (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "x84nF6Q2R0m2dT1uYdk6Gg",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-casual-02-grey (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "55j0_P5hTMmBE92h0o3CmA",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-casual-03",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "146130067",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-jeans-01",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "146120748",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-jeans-01-color2 (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "ZOCvSITVSO-Muc2ECc4Pow",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-jeans-01-color5 (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "5v8yAHTgStqDnYZuJEmFrw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-jeans-01-color9 (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "Or3DLjQPRVmwmOeXQSDYdg",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-jeans-02",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "148367876",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-jeans-04",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "146089155",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-jeans-04-color1 (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "ydvKd4ZGT9iBpY4CaW05wA",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-jeans-04-color2 (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "bWkPZhOzQI-UVmKBhAUVQA",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-military-01",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "146142477",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-occasionwear-01-blacksun",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "161312422",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-occasionwear-01-bleachedjeans",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "5uxVpIcuS5CrRe6CMab6hQ",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "pants-occasionwear-01-bleachedJeans (duplicate)",
+          "type": "bottom",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "_7S-QaZcTQKRMHrQxmuhWg",
+          "bodyType": "generic",
+          "locked": false
+        }
+      ]
+    },
+    "eye": {
+      "count": 19,
+      "items": [
+        {
+          "name": "eye-01",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-02",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-03",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-04",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-05",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-06",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-07",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-08",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-09",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-10",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-11",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-12",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-13",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-14",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-15",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-16",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-17",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-18",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eye-19",
+          "type": "eye",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "eyebrows": {
+      "count": 32,
+      "items": [
+        {
+          "name": "eyebrow-01",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-02",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-03",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-04",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-05",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-06",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-07",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-08",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-09",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-10",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-11",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-12",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-13",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-14",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-15",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-16",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-17",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-18",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-19",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-20",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-21",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-22",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-23",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-24",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-25",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-26",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-27",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-28",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-29",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-30",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-31",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyebrow-32",
+          "type": "eyebrows",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": true,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "eyeshape": {
+      "count": 11,
+      "items": [
+        {
+          "name": "eyeShape01",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyeShape02",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyeShape03",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyeShape04",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyeShape05",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyeShape06",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyeShape07",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyeShape08",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyeShape09",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyeShape10",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "eyeShape11",
+          "type": "eyeshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "facemask": {
+      "count": 39,
+      "items": [
+        {
+          "name": "facemask-cyberpunk-01",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-cyberpunk-02",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-cyberpunk-03",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-cyberpunk-04",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-halloween-02",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-halloween-05",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-01",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-02",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-03",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-04",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-05",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-06",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-07",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-08",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-10",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-11",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-12",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-13",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-14",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-15",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-17",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-18",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-makeup-19",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-maybelline-color1",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-maybelline-color2",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-maybelline-color3",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-maybelline-color4",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-maybelline-color5",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-MNY-01",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-MNY-02",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-MNY-03",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-MNY-04",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-MNY-05",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-tattoo-01",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-tattoo-02",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-tattoo-03",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-tattoo-04",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-tattoo-05",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facemask-tattoo-06",
+          "type": "facemask",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "faceshape": {
+      "count": 10,
+      "items": [
+        {
+          "name": "faceShape01",
+          "type": "faceshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "faceShape02",
+          "type": "faceshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "faceShape03",
+          "type": "faceshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "faceShape04",
+          "type": "faceshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "faceShape05",
+          "type": "faceshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "faceShape06",
+          "type": "faceshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "faceShape07",
+          "type": "faceshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "faceShape08",
+          "type": "faceshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "faceShape09",
+          "type": "faceshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "faceShape10",
+          "type": "faceshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "facewear": {
+      "count": 12,
+      "items": [
+        {
+          "name": "facewear-bandana-01",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-bandana-03",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-bandana-05",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-bandana-06",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-bandana-07",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-bandana-08",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-carnival-01",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-carnival-02",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-carnival-03",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-carnival-04",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-halloween-01",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "facewear-halloween-02",
+          "type": "facewear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "footwear": {
+      "count": 20,
+      "items": [
+        {
+          "name": "boots-combat-01",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "boots-combat-01-darkblue",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "boots-combat-01-yellow",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "boots-hiking-01",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "boots-sport-01-blackwine (duplicate)",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "boots-sport-03-beigepalette (duplicate)",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "shoes-casual-01",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "shoes-casual-01-green (duplicate)",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "shoes-football-01",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-casual-01",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-casual-01-beige (duplicate)",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-casual-01-black (duplicate)",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-casual-01-grey (duplicate)",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-casual-02",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-casual-02-black (duplicate)",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-sport-01",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-sport-01-black (duplicate)",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-sport-01-bluewhite (duplicate)",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-sport-01-white",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "tennis-sport-01-white (duplicate)",
+          "type": "footwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "glasses": {
+      "count": 68,
+      "items": [
+        {
+          "name": "glasses-01",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247416",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "glasses-02",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-03",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-04",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-05",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-06",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-07",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-08",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-09",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-10",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-11",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-12",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-13",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-14",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-15",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-16",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-17",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-18",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-19",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-20",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-21",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-22",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-23",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-24",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-26",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-27",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-28",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-29",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-30",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-31",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-32",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-33",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-34",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-35",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-36",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-37",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-38",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-39",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-40",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-41",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-42",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-43",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-44",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-45",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-47",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-48",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-49",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-52",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-53",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-54",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-55",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-56",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-57",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-58",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-59",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-64",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-65",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-66",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-67",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-68",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-69",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-70",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-71",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-72",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-flickplay-01",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-MNY-01-f",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-MNY-02-f",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "glasses-pentagrama",
+          "type": "glasses",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "hair": {
+      "count": 115,
+      "items": [
+        {
+          "name": "hair-01",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247420",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-02",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247422",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-03",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247424",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-04",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247425",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-05",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247462",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-06",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247465",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-07",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247464",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-08",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247467",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-09",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247430",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-10",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247466",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-100",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "49569568",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-101",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "49572698",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-105",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "hair-106",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "hair-107",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "hair-11",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247468",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-111",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "49611932",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-112",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "50051765",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-115",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "hair-116",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "147536069",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-12",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true
+        },
+        {
+          "name": "hair-13",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247469",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-15",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247471",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-16",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247472",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-17",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247473",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-18",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "23368535",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-19",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247474",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-20",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247475",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-21",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247476",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-22",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247477",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-23",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247481",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-24",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247478",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-25",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247479",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-26",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247482",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-27",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247480",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-28",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247537",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-29",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247538",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-30",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247539",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-31",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247540",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-32",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247543",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-33",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247541",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-34",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247546",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-35",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247545",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-37",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247544",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-38",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247547",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-39",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247548",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-40",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247550",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-41",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247549",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-42",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247551",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-43",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247552",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-44",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247554",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-45",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247556",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-47",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247569",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-48",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247570",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-49",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247572",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-50",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247573",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-51",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247574",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-52",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247536",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-53",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "9247579",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-54",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247575",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-55",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "9247582",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-56",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "11804862",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-57",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "19323928",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-58",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "16706931",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-59",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "19251134",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-60",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "16845783",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-60-room8",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "192930046",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-61",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "22332634",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-62",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "22341158",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-63",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "22370080",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-64",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "22385401",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-65",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "22396922",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-68",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "10204676",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-69",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "36202232",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-70",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "39291588",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-71",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "39292290",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-72",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "39101102",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-73",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "40465568",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-74",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "38775805",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-76",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "39574673",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-77",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "39291647",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-78",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "39293543",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-79",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "39645096",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-80",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "39522323",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-81",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "40738863",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-82",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "40739571",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-83",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "40604421",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-84",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "40466374",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-85",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "40524678",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-86",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "40597504",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-87",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "40623351",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-88",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "49561763",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-90",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "60906377",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-94",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "49564519",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-95",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "49597582",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-loreal-01",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "143342914",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-loreal-02",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "143343048",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-loreal-03",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "143343957",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-loreal-04",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "143344465",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-loreal-05",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "143344850",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-loreal-terranos_01",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "153713043",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-loreal-terranos_02",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "150708889",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-loreal-terranos_03",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "150708890",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-loreal-terranos_04",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "150708892",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-loreal-terranos_05",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "150708893",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "Hair-Loreal_06",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "147661118",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "Hair-Loreal_07",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "147634393",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "Hair-Loreal_08",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "147634394",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "Hair-Loreal_09",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "147634442",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "Hair-Loreal_10",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "147634449",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-moonaris-01",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "192246919",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-moonaris-02",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "190139013",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-moonaris-03",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "190139052",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-moonaris-04",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "190139059",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hair-moonaris-05",
+          "type": "hair",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "192246923",
+          "bodyType": "generic",
+          "locked": false
+        }
+      ]
+    },
+    "headwear": {
+      "count": 51,
+      "items": [
+        {
+          "name": "headwear-baseball-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-baseball-02",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-baseball-03",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-beanie-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-beanie-02",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-beanie-03",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-beanie-04",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-bodysuitscarf02-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-bodysuitscarf03-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-buckethat-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-buckethat-02",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-buckethat-03",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-buckethat-04",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-buckethat-05",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-CalvinKlein-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-christmas-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-christmas-02",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-christmas-04",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-christmas-04 (duplicate)",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-christmas-05",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-christmas-05 (duplicate)",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-cowboy-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-cowboy-02",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-cowboy-03",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-cowboy-04",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-cowboy-05",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-cyberpunk-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-cyberpunk-04",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-halloween-05",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-halloween-06",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-halloween-07",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-hashmask-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-hashmask-02",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-hashmask-03",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-hijab-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-hijab-02",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-hijab-03",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-hijab-04",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-hijab-05",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-hijab-06",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-hijab-07",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-pride-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-racing-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-racing-02",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-racing-03",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-racing-04",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-snowboard-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-snowboard-02",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-starwars-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-starwars-02",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "headwear-turbant-01",
+          "type": "headwear",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "lipshape": {
+      "count": 10,
+      "items": [
+        {
+          "name": "lipShape01",
+          "type": "lipshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "lipShape02",
+          "type": "lipshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "lipShape03",
+          "type": "lipshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "lipShape04",
+          "type": "lipshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "lipShape05",
+          "type": "lipshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "lipShape06",
+          "type": "lipshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "lipShape07",
+          "type": "lipshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "lipShape08",
+          "type": "lipshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "lipShape09",
+          "type": "lipshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "lipShape10",
+          "type": "lipshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "noseshape": {
+      "count": 12,
+      "items": [
+        {
+          "name": "noseShape01",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape02",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape03",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape04",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape05",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape06",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape07",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape08",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape09",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape10",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape11",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "noseShape12",
+          "type": "noseshape",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "outfit": {
+      "count": 111,
+      "items": [
+        {
+          "name": "outfit-angel-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-archer-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-autumn-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-autumn-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-autumn-03-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-backtoschool-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-backtoschool-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-backtoschool-06-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-basic-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-basicrpm-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-basicrpm-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-blackfriday-vrgamer-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-bodysuitscarf-03-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-casual-11-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-casualoversized-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-casualoversized-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-cheer-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-cheer-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-cheer-03-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-cheer-04-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-christmas-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-christmas-03-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-christmas-04-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classic-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classic-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classic-03-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classic-04-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classic-05-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classic-06-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classicoversized-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-costume-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-costume-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-costume-03-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-costume-04-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-cupra-09-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-cupra-10-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-doctor-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-dress-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-dress-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-dress-03-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-casual-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-casual-02-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-casual-05-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-casual-06-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-casual-07-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-casual-08-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-casual-09-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-casual-10-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-cyberpunk-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-cyberpunk-02-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-cyberpunk-03-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-cyberpunk-04-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-cyberpunk-05-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-cyberpunkneokitsch-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-indian-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-indiangujrathi-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-indiangym-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-medievalplumeria-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-medievalplumeria-02-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-military-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-office-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-office-02-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-office-03-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-overall-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-overall-02-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-overall-03-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-pajamas-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-pajamas-02-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-pajamas-03-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-pride-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-racer-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-racer-02-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-racer-03-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-racer-04-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-racer-05-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-racer-06-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-racer-07-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-racer-08-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-scifi-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-scifi-02-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-scifi-03-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-starwars-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-vintage-01-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-f-vintage-02-v2",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-golf-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-golf-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-halloween-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-halloween-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-Look3-CalvinKlein-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-Look4-CalvinKlein-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-Look5-CalvinKlein-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-Look6-CalvinKlein-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-Look7-CalvinKlein-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-matrix-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-matrix-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-maybelline-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-maybelline-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-mechanic-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-overall-04-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-overall-05-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-police-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-racing-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-racing-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-rogue-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-school-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-school-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-snowboard-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-snowboard-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-snowboard-03-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-valentinecolorblockdress-02-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-wedding-01-v2-f",
+          "type": "outfit",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        }
+      ]
+    },
+    "top": {
+      "count": 33,
+      "items": [
+        {
+          "name": "hoodie-01",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "146120116",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hoodie-02-eggnavy",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "OFqZJpJgS4-fIxE-z-hiNA",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "hoodie-02-whitesmileys",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "S9ChKPhoSY-1cvYvb8BEHQ",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-occassionwear-01",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "146130059",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-occassionwear-02",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "145064511",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-occassionwear-02-blackwhite",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "RAMumX7mRJKdtzkYp7SOQw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-occassionwear-02-blueice",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "ISV88W_gQtyrDr06kMcYWg",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-occassionwear-02-blueiceemojis",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "Zm1E1QzdTkqAVEawt9pzNQ",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-puffed-01",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "146089081",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-puffed-01-olive",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "wnnHEejFQYOdVQd8UW5s3g",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-puffed-02",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "146130138",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-puffed-02-black",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "zj3Y_TQJR4mNqPIJZJPkxg",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-puffed-02-painted",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "PNRGEG92SGOUUphSIcrqOg",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-puffed-03",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "148386958",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-puffed-04",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "146120675",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-puffed-05-brown",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "vA-o4T0SSymkoZ-Cqorltw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-puffed-05-painted",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "146120326",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-puffed-05-yellow",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "UL2Vl14LRpqLssDHcGSPIw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-sport-01",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "146142423",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-sport-01-blueyellow",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "DLw_L1uMQimBfmsuch-ZKw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-sport-01-halfdenim",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "pe32_IT1S2yshCFIcX0DQg",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "jacket-sport-01-pastelgreen",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "NP7CyncJQ82WwO1_tdP6CQ",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "sweater-01-longslv-hoodiecoll-pocket-strings-flowers",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "2l5H3ls1THm2wWiHVT8FYQ",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "sweater-01-longslv-hoodiecoll-pocket-strings-navysmile",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "kwhVa1YNStiAN8B7oceBpg",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "sweater-01-longslv-hoodiecoll-pocket-strings-palemint",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "q7ZcFrNFQkGIZd97tTguHA",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "sweater-01-longslv-hoodiecoll-strings-caquidecal",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "a0mD7Y46QlSYbQLFCdgQTA",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "sweater-01-longslv-hoodiecoll-strings-cocoasmile",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "Q1JVYvDeSNWjI0UuA2K8BQ",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "sweater-01-longslv-hoodiecoll-strings-tripalecolor",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "7c_nGqaQQ96FoytM3tmg1Q",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "sweater-01-longslv-roundcoll-brightbluedecal",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "QrMGVJqKQ0yyO7lh2UbkBA",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "sweater-01-longslv-roundcoll-darkgrey",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "tjfdXbNjQAubq1R8TNc6iw",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "sweater-01-longslv-roundcoll-teddybrown",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "wajbjMhsQO-Wy2VXOoPCQQ",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "top-tshirt-01",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": true,
+          "id": "145857239",
+          "bodyType": "generic",
+          "locked": false
+        },
+        {
+          "name": "top-tshirt-01-wine",
+          "type": "top",
+          "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false,
+          "id": "6_JvB8dVQdSSw5kLE3AycA",
+          "bodyType": "generic",
+          "locked": false
+        }
+      ]
+    }
+  },
+  "totalAssets": 607
+}

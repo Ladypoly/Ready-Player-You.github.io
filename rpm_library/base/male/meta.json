@@ -1,0 +1,63 @@
+{
+  "type": "base",
+  "gender": "male",
+  "morphTargets": {
+    "faceShapes": [
+      "faceShape01",
+      "faceShape02",
+      "faceShape03",
+      "faceShape04",
+      "faceShape05",
+      "faceShape06",
+      "faceShape07",
+      "faceShape08",
+      "faceShape09",
+      "faceShape10"
+    ],
+    "eyeShapes": [
+      "eyeShape01",
+      "eyeShape02",
+      "eyeShape03",
+      "eyeShape04",
+      "eyeShape05",
+      "eyeShape06",
+      "eyeShape07",
+      "eyeShape08",
+      "eyeShape09",
+      "eyeShape10",
+      "eyeShape11"
+    ],
+    "noseShapes": [
+      "noseShape01",
+      "noseShape02",
+      "noseShape03",
+      "noseShape04",
+      "noseShape05",
+      "noseShape06",
+      "noseShape07",
+      "noseShape08",
+      "noseShape09",
+      "noseShape10",
+      "noseShape11",
+      "noseShape12"
+    ],
+    "lipShapes": [
+      "lipShape01",
+      "lipShape02",
+      "lipShape03",
+      "lipShape04",
+      "lipShape05",
+      "lipShape06",
+      "lipShape07",
+      "lipShape08",
+      "lipShape09",
+      "lipShape10"
+    ],
+    "animations": [
+      "ARKit",
+      "Oculus Visemes",
+      "Default"
+    ]
+  },
+  "totalMorphs": 115
+}
