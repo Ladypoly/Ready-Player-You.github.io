@@ -169,29 +169,44 @@ class AvatarCreatorApp {
         const typeData = this.catalog.assetTypes[category];
         if (!typeData) return [];
 
+        const gender = this.currentGender;
+
         return typeData.items.filter(item => {
-            // Filter by gender if needed
-            if (category === 'beard' && this.currentGender === 'female') {
+            // Beard only for male
+            if (category === 'beard' && gender === 'female') {
                 return false;
             }
 
-            // Check metadata gender
-            if (item.gender && item.gender !== 'neutral' && item.gender !== this.currentGender) {
-                return false;
-            }
-
-            // Also check asset name for gender hints (outfit-f-, outfit-m-, -v2-f, -v2-m)
             const name = item.name.toLowerCase();
-            if (this.currentGender === 'male') {
-                // Exclude female-specific assets
-                if (name.includes('-f-') || name.endsWith('-f') || name.includes('-v2-f')) {
-                    return false;
-                }
-            } else if (this.currentGender === 'female') {
-                // Exclude male-specific assets
-                if (name.includes('-m-') || name.endsWith('-m') || name.includes('-v2-m')) {
-                    return false;
-                }
+
+            // Check for gender-specific naming patterns
+            // Female patterns: -f-, -f, -v2-f, _f_, -female, outfit-f-
+            const isFemaleAsset =
+                name.includes('-f-') ||
+                name.endsWith('-f') ||
+                name.includes('-v2-f') ||
+                name.includes('_f_') ||
+                name.includes('-female') ||
+                name.includes('outfit-f-') ||
+                name.includes('dress') ||  // Dresses are typically female
+                name.includes('-cheer-');   // Cheerleader outfits
+
+            // Male patterns: -m-, -m, -v2-m, _m_, -male, outfit-m-
+            const isMaleAsset =
+                name.includes('-m-') ||
+                name.endsWith('-m') ||
+                name.includes('-v2-m') ||
+                name.includes('_m_') ||
+                name.includes('-male') ||
+                name.includes('outfit-m-');
+
+            // If asset is gender-specific, must match current gender
+            if (isFemaleAsset && gender !== 'female') return false;
+            if (isMaleAsset && gender !== 'male') return false;
+
+            // Also check metadata gender field
+            if (item.gender && item.gender !== 'neutral' && item.gender !== gender) {
+                return false;
             }
 
             return true;

@@ -1,91 +1,104 @@
 /**
- * Avatar Creator - Avatar Management
+ * Avatar Creator - Avatar Management (Clean Rewrite)
  *
- * Hybrid approach:
- * - Uses complete avatar GLBs as base (proper body rigging)
- * - Attaches raw hair/beard/glasses assets to head bone
- * - Supports morph targets for face customization
+ * Key principles:
+ * - Single state object for easy reset
+ * - Validate before acting
+ * - Clear before load
+ * - Parent-agnostic removal
  */
 
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 export class AvatarManager {
-    constructor(scene, catalog) {
-        this.sceneManager = scene;
-        this.threeScene = scene.scene; // Direct reference to THREE.Scene
+    constructor(sceneManager, catalog) {
+        this.sceneManager = sceneManager;
+        this.threeScene = sceneManager.scene; // Direct THREE.Scene reference
         this.catalog = catalog;
         this.loader = new GLTFLoader();
-
-        this.currentAvatar = null;
-        this.currentGender = null;
-        this.morphTargets = {};
-        this.meshes = {};
-        this.bones = {};
-
-        // Currently loaded assets
-        this.loadedAssets = {
-            hair: null,
-            beard: null,
-            glasses: null,
-            top: null,
-            bottom: null,
-            footwear: null,
-            outfit: null,
-            facewear: null,
-            headwear: null,
-            facemask: null
-        };
-
-        // Bone references for attaching assets
-        this.headBone = null;
-        this.hipsBone = null;
-
-        // Current colors for hair/beard
-        this.hairColor = new THREE.Color(0x3d2314); // Default brown
-        this.beardColor = new THREE.Color(0x3d2314);
-
-        // Skin color
-        this.skinColor = new THREE.Color(0xc68642); // Default medium skin tone
-
         this.basePath = '../rpm_library';
+
+        // Colors (persist across avatar switches)
+        this.hairColor = new THREE.Color(0x3d2314);
+        this.beardColor = new THREE.Color(0x3d2314);
+        this.skinColor = new THREE.Color(0xc68642);
+
+        // Debug offsets (set via debug panel)
+        this.debugOffsets = null;
+
+        // Single state object - easy to fully reset
+        this.state = this.createEmptyState();
     }
 
+    createEmptyState() {
+        return {
+            avatar: null,
+            gender: null,
+            headBone: null,
+            hipsBone: null,
+            meshes: {},
+            bones: {},
+            morphTargets: {},
+            assets: {} // { category: { container, model, name } }
+        };
+    }
+
+    /**
+     * FULL RESET - removes everything from scene completely
+     */
+    fullReset() {
+        console.log('=== FULL RESET ===');
+
+        // 1. Remove all assets first (they're attached to avatar or headBone)
+        for (const category of Object.keys(this.state.assets)) {
+            this.removeAsset(category);
+        }
+
+        // 2. Remove avatar from scene
+        if (this.state.avatar) {
+            console.log('Removing avatar from scene');
+            this.threeScene.remove(this.state.avatar);
+            this.disposeObject(this.state.avatar);
+        }
+
+        // 3. Reset state completely
+        this.state = this.createEmptyState();
+
+        console.log('=== RESET COMPLETE ===');
+    }
+
+    /**
+     * Load base avatar for gender
+     */
+    async loadBase(gender) {
+        return this.loadAvatar(gender === 'female' ? 'female_default' : 'male_default');
+    }
+
+    /**
+     * Load avatar - always does full reset first
+     */
     async loadAvatar(avatarName) {
         console.log(`Loading avatar: ${avatarName}`);
 
-        // Remove all loaded assets first
-        this.clearAllAssets();
-
-        // Remove existing avatar
-        if (this.currentAvatar) {
-            console.log('Removing existing avatar from scene');
-            this.threeScene.remove(this.currentAvatar);
-            this.disposeObject(this.currentAvatar);
-            this.currentAvatar = null;
-        }
-
-        // Reset all state
-        this.morphTargets = {};
-        this.meshes = {};
-        this.bones = {};
-        this.headBone = null;
-        this.hipsBone = null;
+        // ALWAYS full reset first - this is critical
+        this.fullReset();
 
         const path = `${this.basePath}/avatars/${avatarName}.glb`;
 
         try {
             const gltf = await this.loadGLTF(path);
-            this.currentAvatar = gltf.scene;
+            this.state.avatar = gltf.scene;
+            this.state.gender = avatarName.includes('female') ? 'female' : 'male';
 
             // Setup avatar
-            this.currentAvatar.position.set(0, 0, 0);
-            this.currentAvatar.scale.set(1, 1, 1);
+            this.state.avatar.position.set(0, 0, 0);
+            this.state.avatar.scale.set(1, 1, 1);
 
-            // Index all meshes, bones, and morph targets
-            this.currentAvatar.traverse((child) => {
+            // Index meshes, bones, and morph targets
+            this.state.avatar.traverse((child) => {
                 if (child.isMesh) {
-                    this.meshes[child.name] = child;
+                    this.state.meshes[child.name] = child;
                     child.castShadow = true;
                     child.receiveShadow = true;
 
@@ -95,309 +108,190 @@ export class AvatarManager {
                 }
 
                 if (child.isBone) {
-                    this.bones[child.name] = child;
-                    // Find key bones
+                    this.state.bones[child.name] = child;
                     if (child.name === 'Head') {
-                        this.headBone = child;
-                        console.log('Found Head bone at:', child.getWorldPosition(new THREE.Vector3()));
+                        this.state.headBone = child;
                     }
                     if (child.name === 'Hips') {
-                        this.hipsBone = child;
-                        console.log('Found Hips bone at:', child.getWorldPosition(new THREE.Vector3()));
+                        this.state.hipsBone = child;
                     }
                 }
             });
 
+            // Validate we found head bone
+            if (!this.state.headBone) {
+                console.warn('No Head bone found in avatar!');
+            }
+
             // Add to scene
-            this.threeScene.add(this.currentAvatar);
+            this.threeScene.add(this.state.avatar);
 
-            // Determine gender from name
-            this.currentGender = avatarName.includes('female') ? 'female' : 'male';
-
-            // Hide built-in hair and beard (we'll use raw assets instead)
+            // Hide built-in hair/beard (we use raw assets)
             this.hideBuiltInHair();
             this.hideBuiltInBeard();
 
-            console.log(`Loaded avatar with ${Object.keys(this.meshes).length} meshes, ${Object.keys(this.bones).length} bones`);
-            console.log('Available bones:', Object.keys(this.bones).join(', '));
+            console.log(`Loaded avatar: ${Object.keys(this.state.meshes).length} meshes, ${Object.keys(this.state.bones).length} bones`);
 
-            return this.currentAvatar;
+            return this.state.avatar;
         } catch (error) {
             console.error('Failed to load avatar:', error);
             throw error;
         }
     }
 
-    async loadBase(gender) {
-        const avatarName = gender === 'female' ? 'female_default' : 'male_default';
-        return this.loadAvatar(avatarName);
-    }
+    /**
+     * Load and attach an asset
+     */
+    async loadAsset(category, assetName) {
+        console.log(`Loading ${category}: ${assetName}`);
 
-    indexMorphTargets(mesh) {
-        const morphDict = mesh.morphTargetDictionary;
-        if (!morphDict) return;
-
-        for (const [name, index] of Object.entries(morphDict)) {
-            if (!this.morphTargets[name]) {
-                this.morphTargets[name] = [];
-            }
-            this.morphTargets[name].push({
-                mesh: mesh,
-                index: index
-            });
-        }
-    }
-
-    applyMorph(name, value) {
-        const targets = this.morphTargets[name];
-        if (!targets) {
-            // Try case-insensitive match
-            const lowerName = name.toLowerCase();
-            for (const [key, val] of Object.entries(this.morphTargets)) {
-                if (key.toLowerCase() === lowerName) {
-                    for (const target of val) {
-                        target.mesh.morphTargetInfluences[target.index] = value;
-                    }
-                    return;
-                }
-            }
-            console.warn(`Morph target "${name}" not found`);
+        // Validate we have an avatar
+        if (!this.state.avatar) {
+            console.error('Cannot load asset - no avatar loaded');
             return;
         }
 
-        for (const target of targets) {
-            target.mesh.morphTargetInfluences[target.index] = value;
-        }
-    }
-
-    resetMorphs() {
-        for (const name in this.morphTargets) {
-            this.applyMorph(name, 0);
-        }
-    }
-
-    // Hide built-in meshes from complete avatar
-    hideBuiltInHair() {
-        for (const [name, mesh] of Object.entries(this.meshes)) {
-            if (name.toLowerCase().includes('hair')) {
-                mesh.visible = false;
-            }
-        }
-    }
-
-    hideBuiltInBeard() {
-        for (const [name, mesh] of Object.entries(this.meshes)) {
-            if (name.toLowerCase().includes('beard') || name.toLowerCase().includes('facialh')) {
-                mesh.visible = false;
-            }
-        }
-    }
-
-    /**
-     * Determine attachment type for asset category
-     */
-    getAttachmentType(category) {
-        // Head-attached assets
-        if (['hair', 'beard', 'glasses', 'facewear', 'headwear', 'facemask'].includes(category)) {
-            return 'head';
-        }
-        // Body assets - attach to avatar root (they have full body positioning)
-        if (['top', 'bottom', 'footwear', 'outfit'].includes(category)) {
-            return 'root';
-        }
-        return 'head'; // default
-    }
-
-    /**
-     * Load and attach a raw asset
-     */
-    async loadAsset(category, assetName) {
-        console.log(`Loading ${category} asset: ${assetName}`);
-
-        // Remove existing asset of this category
+        // Remove existing asset of this category FIRST
         this.removeAsset(category);
 
         if (assetName === 'none') {
             return;
         }
 
-        // Mutual exclusion: outfit vs individual clothing
+        // Handle mutual exclusion: outfit vs individual clothing
         if (category === 'outfit') {
-            // Loading an outfit clears individual pieces
-            this.clearIndividualClothing();
+            this.removeAsset('top');
+            this.removeAsset('bottom');
+            this.removeAsset('footwear');
         } else if (['top', 'bottom', 'footwear'].includes(category)) {
-            // Loading individual piece clears any outfit
-            this.clearOutfit();
+            this.removeAsset('outfit');
         }
 
-        const attachType = this.getAttachmentType(category);
+        const isHeadAttached = ['hair', 'beard', 'glasses', 'facewear', 'headwear', 'facemask'].includes(category);
+        const isClothing = ['outfit', 'top', 'bottom', 'footwear'].includes(category);
+        const isHairOrBeard = category === 'hair' || category === 'beard';
 
-        if (attachType === 'head' && !this.headBone) {
-            console.error('No head bone found - cannot attach head asset');
+        // Validate head bone for head-attached items
+        if (isHeadAttached && !this.state.headBone) {
+            console.error('Cannot attach head asset - no head bone');
             return;
         }
 
         const assetFolder = `${this.basePath}/assets/${category}/${assetName}`;
-        const assetPath = `${assetFolder}/model.glb`;
-        const texturePath = `${assetFolder}/texture.png`;
-        const maskPath = `${assetFolder}/mask.png`;
 
         try {
-            // Determine what to load based on category
-            const isHairOrBeard = (category === 'hair' || category === 'beard');
-
-            // Load model and appropriate texture in parallel
-            const loadPromises = [this.loadGLTF(assetPath)];
+            // Load model and optional texture
+            const loadPromises = [this.loadGLTF(`${assetFolder}/model.glb`)];
 
             if (isHairOrBeard) {
-                // Hair/beard use mask.png for alpha, color is applied separately
-                loadPromises.push(this.loadTextureFile(maskPath).catch(() => null));
+                loadPromises.push(this.loadTextureFile(`${assetFolder}/mask.png`).catch(() => null));
             } else {
-                // Other assets use texture.png
-                loadPromises.push(this.loadTextureFile(texturePath).catch(() => null));
+                loadPromises.push(this.loadTextureFile(`${assetFolder}/texture.png`).catch(() => null));
             }
 
             const [gltf, texture] = await Promise.all(loadPromises);
+            const model = gltf.scene;
 
-            const assetModel = gltf.scene;
-
-            // Get head bone world position
-            const headWorldPos = new THREE.Vector3();
-            this.headBone.getWorldPosition(headWorldPos);
-            console.log(`Head bone world position: ${headWorldPos.x.toFixed(3)}, ${headWorldPos.y.toFixed(3)}, ${headWorldPos.z.toFixed(3)}`);
-
-            // Analyze the asset geometry to find its bounds
-            const bounds = this.getAssetBounds(assetModel);
-            console.log(`Asset bounds: Y min=${bounds.min.y.toFixed(3)}, max=${bounds.max.y.toFixed(3)}, center=${bounds.center.y.toFixed(3)}`);
-
-            // Create a container for the asset
+            // Create container
             const container = new THREE.Group();
-            container.name = `${category}_container`;
+            container.name = `${category}_asset`;
 
-            // Get the color for hair/beard
+            // Apply materials
             const assetColor = category === 'hair' ? this.hairColor :
                                category === 'beard' ? this.beardColor : null;
 
-            // Add asset to container and apply texture/color
-            assetModel.traverse((child) => {
+            model.traverse((child) => {
                 if (child.isMesh) {
                     child.castShadow = true;
                     child.receiveShadow = true;
 
                     if (child.material) {
-                        if (isHairOrBeard) {
-                            // For hair/beard: apply color and use mask for alpha
+                        if (isHairOrBeard && assetColor) {
                             child.material.color = assetColor.clone();
-
                             if (texture) {
-                                // Use mask as alpha map
                                 child.material.alphaMap = texture;
                                 child.material.transparent = true;
                                 child.material.alphaTest = 0.5;
                             }
-
-                            console.log(`Applied color ${assetColor.getHexString()} to ${child.name}`);
                         } else if (texture) {
-                            // For other assets: apply texture directly
                             child.material.map = texture;
-                            console.log(`Applied texture to ${child.name}`);
                         }
-
                         child.material.needsUpdate = true;
                     }
                 }
             });
-            container.add(assetModel);
 
-            // Apply body shape morphs for clothing
-            if (['outfit', 'top', 'bottom', 'footwear'].includes(category)) {
-                this.applyBodyMorphs(assetModel);
+            container.add(model);
 
-                // Apply skin color to skin meshes in outfit
-                assetModel.traverse((child) => {
-                    if (child.isMesh && this.isSkinMesh(child.name)) {
-                        if (child.material) {
-                            child.material.color = this.skinColor.clone();
-                            child.material.needsUpdate = true;
-                            console.log(`Applied skin color to ${child.name}`);
-                        }
-                    }
-                });
+            // Apply body morphs and skin color for clothing
+            if (isClothing) {
+                this.applyBodyMorphs(model);
+                this.applySkinColorToModel(model);
             }
 
-            // Attach based on category type
-            if (attachType === 'head') {
-                // Calculate offset for head-attached items
-                const headOffset = this.getAssetOffset(category, bounds);
-                this.headBone.add(container);
-                container.position.copy(headOffset);
-                console.log(`Attached ${category} "${assetName}" to head bone with offset: ${headOffset.x.toFixed(3)}, ${headOffset.y.toFixed(3)}, ${headOffset.z.toFixed(3)}`);
+            // Attach to correct parent
+            if (isHeadAttached) {
+                this.state.headBone.add(container);
+                container.position.copy(this.getAssetOffset(category));
             } else {
-                // Body assets - add to avatar root at origin (they already have correct positioning)
-                this.currentAvatar.add(container);
+                this.state.avatar.add(container);
                 container.position.set(0, 0, 0);
-                console.log(`Attached ${category} "${assetName}" to avatar root`);
             }
 
             // Store reference
-            this.loadedAssets[category] = {
-                container: container,
-                model: assetModel,
-                name: assetName,
-                texture: texture,
-                attachType: attachType
+            this.state.assets[category] = {
+                container,
+                model,
+                name: assetName
             };
 
-            // Update body visibility when clothing is equipped
-            if (['outfit', 'top', 'bottom', 'footwear'].includes(category)) {
+            // Update body visibility
+            if (isClothing) {
                 this.updateBodyVisibility();
             }
 
+            console.log(`Loaded ${category}: ${assetName}`);
+
         } catch (error) {
-            console.error(`Failed to load asset ${assetPath}:`, error);
+            console.error(`Failed to load ${category} "${assetName}":`, error);
         }
     }
 
     /**
-     * Load a texture file
+     * Remove asset - uses parent-agnostic removal
      */
-    loadTextureFile(path) {
-        return new Promise((resolve, reject) => {
-            const textureLoader = new THREE.TextureLoader();
-            textureLoader.load(
-                path,
-                (texture) => {
-                    texture.colorSpace = THREE.SRGBColorSpace;
-                    texture.flipY = false;
-                    resolve(texture);
-                },
-                undefined,
-                (error) => reject(error)
-            );
-        });
+    removeAsset(category) {
+        const asset = this.state.assets[category];
+        if (!asset) return;
+
+        // Parent-agnostic removal - works regardless of what it's attached to
+        if (asset.container && asset.container.parent) {
+            asset.container.parent.remove(asset.container);
+        }
+
+        // Dispose resources
+        if (asset.container) {
+            this.disposeObject(asset.container);
+        }
+
+        // Clear reference
+        delete this.state.assets[category];
+
+        console.log(`Removed ${category}`);
+
+        // Update body visibility if clothing was removed
+        if (['outfit', 'top', 'bottom', 'footwear'].includes(category)) {
+            this.updateBodyVisibility();
+        }
     }
 
     /**
-     * Calculate bounding box of asset
+     * Get asset offset for head-attached items
      */
-    getAssetBounds(model) {
-        const box = new THREE.Box3().setFromObject(model);
-        return {
-            min: box.min,
-            max: box.max,
-            center: box.getCenter(new THREE.Vector3()),
-            size: box.getSize(new THREE.Vector3())
-        };
-    }
-
-    /**
-     * Get positioning offset for different asset types
-     * Uses debug offsets if available, otherwise tuned defaults
-     */
-    getAssetOffset(category, bounds) {
+    getAssetOffset(category) {
         const offset = new THREE.Vector3(0, 0, 0);
 
-        // Check for debug offsets first (set via debug panel)
+        // Check debug offsets first
         if (this.debugOffsets && this.debugOffsets[category]) {
             offset.x = this.debugOffsets[category].x || 0;
             offset.y = this.debugOffsets[category].y || 0;
@@ -405,112 +299,143 @@ export class AvatarManager {
             return offset;
         }
 
-        // Tuned offsets for male and female avatars
-        const isFemale = this.currentGender === 'female';
+        const isFemale = this.state.gender === 'female';
 
         switch (category) {
             case 'hair':
-                if (isFemale) {
-                    offset.x = 0.00;
-                    offset.y = -0.10;
-                    offset.z = 0.01;
-                } else {
-                    offset.x = 0.00;
-                    offset.y = -0.08;
-                    offset.z = 0.02;
-                }
+                offset.y = isFemale ? -0.10 : -0.08;
+                offset.z = isFemale ? 0.01 : 0.02;
                 break;
-
             case 'beard':
-                // Same for both genders
-                offset.x = 0.00;
                 offset.y = -0.09;
                 offset.z = 0.03;
                 break;
-
             case 'glasses':
-                if (isFemale) {
-                    offset.x = 0.00;
-                    offset.y = -0.08;
-                    offset.z = 0.02;
-                } else {
-                    offset.x = 0.00;
-                    offset.y = -0.08;
-                    offset.z = 0.03;
-                }
-                break;
-
-            case 'headwear':
-                // Hats sit on top of head
-                offset.x = 0.00;
                 offset.y = -0.08;
-                offset.z = 0.00;
+                offset.z = isFemale ? 0.02 : 0.03;
                 break;
-
+            case 'headwear':
+                offset.y = -0.08;
+                break;
             case 'facewear':
             case 'facemask':
-                // Face attachments (masks, bandanas, makeup)
-                offset.x = 0.00;
                 offset.y = -0.08;
                 offset.z = 0.02;
-                break;
-
-            default:
                 break;
         }
 
         return offset;
     }
 
-    /**
-     * Hide base avatar body mesh (used when clothing is equipped)
-     * Clothing assets include their own skin meshes
-     */
-    hideBody() {
-        if (!this.currentAvatar) return;
+    // ==================== MORPH TARGETS ====================
 
-        this.currentAvatar.traverse((child) => {
-            if (child.isMesh) {
-                const name = child.name.toLowerCase();
-                // Hide body mesh but keep head, eyes, teeth
-                if (name.includes('body') || name.includes('wolf3d_body') || name.includes('wolf3d_skin')) {
-                    child.visible = false;
-                    console.log(`Hidden body mesh: ${child.name}`);
+    indexMorphTargets(mesh) {
+        const morphDict = mesh.morphTargetDictionary;
+        if (!morphDict) return;
+
+        for (const [name, index] of Object.entries(morphDict)) {
+            if (!this.state.morphTargets[name]) {
+                this.state.morphTargets[name] = [];
+            }
+            this.state.morphTargets[name].push({ mesh, index });
+        }
+    }
+
+    applyMorph(name, value) {
+        const targets = this.state.morphTargets[name];
+        if (!targets) {
+            // Try case-insensitive
+            const lowerName = name.toLowerCase();
+            for (const [key, val] of Object.entries(this.state.morphTargets)) {
+                if (key.toLowerCase() === lowerName) {
+                    for (const t of val) {
+                        t.mesh.morphTargetInfluences[t.index] = value;
+                    }
+                    return;
+                }
+            }
+            return;
+        }
+
+        for (const t of targets) {
+            t.mesh.morphTargetInfluences[t.index] = value;
+        }
+    }
+
+    applyBodyMorphs(model) {
+        const isFemale = this.state.gender === 'female';
+
+        model.traverse((child) => {
+            if (child.isMesh && child.morphTargetDictionary && child.morphTargetInfluences) {
+                const morphDict = child.morphTargetDictionary;
+
+                const femaleMorphs = ['female', 'Female', 'fullbody-female', 'feminine'];
+                const maleMorphs = ['male', 'Male', 'fullbody-male', 'masculine'];
+
+                for (const name of femaleMorphs) {
+                    if (morphDict[name] !== undefined) {
+                        child.morphTargetInfluences[morphDict[name]] = isFemale ? 1.0 : 0.0;
+                    }
+                }
+
+                for (const name of maleMorphs) {
+                    if (morphDict[name] !== undefined) {
+                        child.morphTargetInfluences[morphDict[name]] = isFemale ? 0.0 : 1.0;
+                    }
                 }
             }
         });
     }
 
-    /**
-     * Show base avatar body mesh (used when all clothing is removed)
-     */
-    showBody() {
-        if (!this.currentAvatar) return;
+    // ==================== VISIBILITY ====================
 
-        this.currentAvatar.traverse((child) => {
+    hideBuiltInHair() {
+        for (const [name, mesh] of Object.entries(this.state.meshes)) {
+            if (name.toLowerCase().includes('hair')) {
+                mesh.visible = false;
+            }
+        }
+    }
+
+    hideBuiltInBeard() {
+        for (const [name, mesh] of Object.entries(this.state.meshes)) {
+            if (name.toLowerCase().includes('beard') || name.toLowerCase().includes('facialh')) {
+                mesh.visible = false;
+            }
+        }
+    }
+
+    hideBody() {
+        if (!this.state.avatar) return;
+        this.state.avatar.traverse((child) => {
+            if (child.isMesh) {
+                const name = child.name.toLowerCase();
+                if (name.includes('body') || name.includes('wolf3d_body') || name.includes('wolf3d_skin')) {
+                    child.visible = false;
+                }
+            }
+        });
+    }
+
+    showBody() {
+        if (!this.state.avatar) return;
+        this.state.avatar.traverse((child) => {
             if (child.isMesh) {
                 const name = child.name.toLowerCase();
                 if (name.includes('body') || name.includes('wolf3d_body') || name.includes('wolf3d_skin')) {
                     child.visible = true;
-                    console.log(`Shown body mesh: ${child.name}`);
                 }
             }
         });
     }
 
-    /**
-     * Check if any clothing is currently equipped
-     */
     hasClothingEquipped() {
-        return this.loadedAssets.outfit ||
-               this.loadedAssets.top ||
-               this.loadedAssets.bottom ||
-               this.loadedAssets.footwear;
+        return this.state.assets.outfit ||
+               this.state.assets.top ||
+               this.state.assets.bottom ||
+               this.state.assets.footwear;
     }
 
-    /**
-     * Update body visibility based on equipped clothing
-     */
     updateBodyVisibility() {
         if (this.hasClothingEquipped()) {
             this.hideBody();
@@ -519,205 +444,62 @@ export class AvatarManager {
         }
     }
 
-    /**
-     * Clear ALL loaded assets (used when switching avatars)
-     */
-    clearAllAssets() {
-        const categories = ['hair', 'beard', 'glasses', 'top', 'bottom', 'footwear', 'outfit', 'facewear', 'headwear', 'facemask'];
-        for (const category of categories) {
-            if (this.loadedAssets[category]) {
-                this.removeAsset(category);
-            }
-        }
-        console.log('Cleared all assets');
-    }
+    // ==================== COLORS ====================
 
-    /**
-     * Clear individual clothing pieces (top, bottom, footwear)
-     * Called when loading a full outfit to avoid visual stacking
-     */
-    clearIndividualClothing() {
-        this.removeAsset('top');
-        this.removeAsset('bottom');
-        this.removeAsset('footwear');
-    }
-
-    /**
-     * Clear outfit
-     * Called when loading individual clothing pieces
-     */
-    clearOutfit() {
-        this.removeAsset('outfit');
-    }
-
-    /**
-     * Remove attached asset
-     */
-    removeAsset(category) {
-        const asset = this.loadedAssets[category];
-        if (asset && asset.container) {
-            // Remove from parent based on attachment type
-            if (asset.attachType === 'head' && this.headBone) {
-                this.headBone.remove(asset.container);
-            } else if (this.currentAvatar) {
-                this.currentAvatar.remove(asset.container);
-            }
-            // Dispose resources
-            this.disposeObject(asset.container);
-            this.loadedAssets[category] = null;
-            console.log(`Removed ${category} asset`);
-
-            // Update body visibility when clothing is removed
-            if (['outfit', 'top', 'bottom', 'footwear'].includes(category)) {
-                this.updateBodyVisibility();
-            }
-        }
-    }
-
-    /**
-     * Show/hide methods for compatibility
-     */
-    hideHair() {
-        this.removeAsset('hair');
-    }
-
-    showHair() {
-        // Re-show built-in hair if no custom hair loaded
-        if (!this.loadedAssets.hair) {
-            for (const [name, mesh] of Object.entries(this.meshes)) {
-                if (name.toLowerCase().includes('hair')) {
-                    mesh.visible = true;
-                }
-            }
-        }
-    }
-
-    hideBeard() {
-        this.removeAsset('beard');
-    }
-
-    showBeard() {
-        if (!this.loadedAssets.beard) {
-            for (const [name, mesh] of Object.entries(this.meshes)) {
-                if (name.toLowerCase().includes('beard') || name.toLowerCase().includes('facialh')) {
-                    mesh.visible = true;
-                }
-            }
-        }
-    }
-
-    getMeshNames() {
-        return Object.keys(this.meshes);
-    }
-
-    getMorphTargetNames() {
-        return Object.keys(this.morphTargets);
-    }
-
-    getBoneNames() {
-        return Object.keys(this.bones);
-    }
-
-    /**
-     * Set hair color
-     */
     setHairColor(hexColor) {
         this.hairColor = new THREE.Color(hexColor);
-
-        // Update existing hair asset if loaded
-        const hairAsset = this.loadedAssets.hair;
-        if (hairAsset && hairAsset.model) {
-            hairAsset.model.traverse((child) => {
+        const asset = this.state.assets.hair;
+        if (asset && asset.model) {
+            asset.model.traverse((child) => {
                 if (child.isMesh && child.material) {
                     child.material.color = this.hairColor.clone();
                     child.material.needsUpdate = true;
                 }
             });
         }
-
-        console.log(`Hair color set to: ${this.hairColor.getHexString()}`);
     }
 
-    /**
-     * Set beard color
-     */
     setBeardColor(hexColor) {
         this.beardColor = new THREE.Color(hexColor);
-
-        // Update existing beard asset if loaded
-        const beardAsset = this.loadedAssets.beard;
-        if (beardAsset && beardAsset.model) {
-            beardAsset.model.traverse((child) => {
+        const asset = this.state.assets.beard;
+        if (asset && asset.model) {
+            asset.model.traverse((child) => {
                 if (child.isMesh && child.material) {
                     child.material.color = this.beardColor.clone();
                     child.material.needsUpdate = true;
                 }
             });
         }
-
-        console.log(`Beard color set to: ${this.beardColor.getHexString()}`);
     }
 
-    /**
-     * Get current hair color
-     */
-    getHairColor() {
-        return '#' + this.hairColor.getHexString();
-    }
-
-    /**
-     * Get current beard color
-     */
-    getBeardColor() {
-        return '#' + this.beardColor.getHexString();
-    }
-
-    /**
-     * Set skin color for avatar and all outfit skin meshes
-     */
     setSkinColor(hexColor) {
         this.skinColor = new THREE.Color(hexColor);
 
-        // Update base avatar skin meshes
-        if (this.currentAvatar) {
-            this.currentAvatar.traverse((child) => {
-                if (child.isMesh && this.isSkinMesh(child.name)) {
-                    if (child.material) {
-                        child.material.color = this.skinColor.clone();
-                        child.material.needsUpdate = true;
-                    }
-                }
-            });
+        // Update base avatar
+        if (this.state.avatar) {
+            this.applySkinColorToModel(this.state.avatar);
         }
 
-        // Update skin meshes in loaded outfits/clothing
+        // Update clothing
         for (const category of ['outfit', 'top', 'bottom', 'footwear']) {
-            const asset = this.loadedAssets[category];
+            const asset = this.state.assets[category];
             if (asset && asset.model) {
-                asset.model.traverse((child) => {
-                    if (child.isMesh && this.isSkinMesh(child.name)) {
-                        if (child.material) {
-                            child.material.color = this.skinColor.clone();
-                            child.material.needsUpdate = true;
-                        }
-                    }
-                });
+                this.applySkinColorToModel(asset.model);
             }
         }
-
-        console.log(`Skin color set to: ${this.skinColor.getHexString()}`);
     }
 
-    /**
-     * Get current skin color
-     */
-    getSkinColor() {
-        return '#' + this.skinColor.getHexString();
+    applySkinColorToModel(model) {
+        model.traverse((child) => {
+            if (child.isMesh && this.isSkinMesh(child.name)) {
+                if (child.material) {
+                    child.material.color = this.skinColor.clone();
+                    child.material.needsUpdate = true;
+                }
+            }
+        });
     }
 
-    /**
-     * Check if a mesh is a skin mesh based on name
-     */
     isSkinMesh(name) {
         const lower = name.toLowerCase();
         return lower.includes('skin') ||
@@ -726,75 +508,24 @@ export class AvatarManager {
                lower.includes('hand') ||
                lower.includes('leg') ||
                lower.includes('foot') ||
-               lower.includes('head') ||
-               lower.includes('wolf3d_body') ||
-               lower.includes('wolf3d_head');
+               lower.includes('wolf3d_body');
     }
 
-    /**
-     * Apply body shape morph targets to a clothing asset
-     */
-    applyBodyMorphs(model) {
-        const isFemale = this.currentGender === 'female';
+    getHairColor() { return '#' + this.hairColor.getHexString(); }
+    getBeardColor() { return '#' + this.beardColor.getHexString(); }
+    getSkinColor() { return '#' + this.skinColor.getHexString(); }
 
-        model.traverse((child) => {
-            if (child.isMesh && child.morphTargetDictionary && child.morphTargetInfluences) {
-                const morphDict = child.morphTargetDictionary;
-
-                // Log available morphs for debugging
-                console.log(`Morphs available on ${child.name}:`, Object.keys(morphDict));
-
-                // Try various female body shape morph names
-                const femaleMorphNames = [
-                    'female', 'Female',
-                    'fullbody-female', 'Fullbody-female',
-                    'body_female', 'Body_Female',
-                    'feminine', 'Feminine'
-                ];
-
-                for (const morphName of femaleMorphNames) {
-                    if (morphDict[morphName] !== undefined) {
-                        const index = morphDict[morphName];
-                        child.morphTargetInfluences[index] = isFemale ? 1.0 : 0.0;
-                        console.log(`Applied morph "${morphName}" = ${isFemale ? 1.0 : 0.0} on ${child.name}`);
-                    }
-                }
-
-                // Also check for male morphs (set opposite)
-                const maleMorphNames = [
-                    'male', 'Male',
-                    'fullbody-male', 'Fullbody-male',
-                    'body_male', 'Body_Male',
-                    'masculine', 'Masculine'
-                ];
-
-                for (const morphName of maleMorphNames) {
-                    if (morphDict[morphName] !== undefined) {
-                        const index = morphDict[morphName];
-                        child.morphTargetInfluences[index] = isFemale ? 0.0 : 1.0;
-                        console.log(`Applied morph "${morphName}" = ${isFemale ? 0.0 : 1.0} on ${child.name}`);
-                    }
-                }
-            }
-        });
-    }
+    // ==================== TEXTURE LOADING ====================
 
     async loadTexture(category, textureName) {
         const texturePath = `${this.basePath}/assets/${category}/${textureName}/texture.png`;
 
         try {
-            const textureLoader = new THREE.TextureLoader();
-            const texture = await new Promise((resolve, reject) => {
-                textureLoader.load(texturePath, resolve, undefined, reject);
-            });
+            const texture = await this.loadTextureFile(texturePath);
 
-            texture.colorSpace = THREE.SRGBColorSpace;
-            texture.flipY = false;
-
-            for (const [name, mesh] of Object.entries(this.meshes)) {
+            for (const [name, mesh] of Object.entries(this.state.meshes)) {
                 const nameLower = name.toLowerCase();
-
-                if (category === 'eye' && (nameLower.includes('eye') && !nameLower.includes('brow'))) {
+                if (category === 'eye' && nameLower.includes('eye') && !nameLower.includes('brow')) {
                     if (mesh.material) {
                         mesh.material.map = texture;
                         mesh.material.needsUpdate = true;
@@ -806,21 +537,32 @@ export class AvatarManager {
                     }
                 }
             }
-
-            console.log(`Applied ${category} texture: ${textureName}`);
         } catch (error) {
-            console.warn(`Failed to load texture ${texturePath}:`, error);
+            console.warn(`Failed to load texture: ${texturePath}`);
         }
     }
 
+    loadTextureFile(path) {
+        return new Promise((resolve, reject) => {
+            const loader = new THREE.TextureLoader();
+            loader.load(
+                path,
+                (texture) => {
+                    texture.colorSpace = THREE.SRGBColorSpace;
+                    texture.flipY = false;
+                    resolve(texture);
+                },
+                undefined,
+                reject
+            );
+        });
+    }
+
+    // ==================== UTILITIES ====================
+
     loadGLTF(path) {
         return new Promise((resolve, reject) => {
-            this.loader.load(
-                path,
-                (gltf) => resolve(gltf),
-                (progress) => {},
-                (error) => reject(error)
-            );
+            this.loader.load(path, resolve, undefined, reject);
         });
     }
 
@@ -844,14 +586,21 @@ export class AvatarManager {
         if (material.normalMap) material.normalMap.dispose();
         if (material.roughnessMap) material.roughnessMap.dispose();
         if (material.metalnessMap) material.metalnessMap.dispose();
+        if (material.alphaMap) material.alphaMap.dispose();
         material.dispose();
     }
 
-    getModel() {
-        return this.currentAvatar;
-    }
+    // ==================== GETTERS (for compatibility) ====================
 
-    getGender() {
-        return this.currentGender;
-    }
+    getModel() { return this.state.avatar; }
+    getGender() { return this.state.gender; }
+    get currentGender() { return this.state.gender; }
+    get currentAvatar() { return this.state.avatar; }
+    get loadedAssets() { return this.state.assets; }
+    get meshes() { return this.state.meshes; }
+    get morphTargets() { return this.state.morphTargets; }
+
+    getMeshNames() { return Object.keys(this.state.meshes); }
+    getMorphTargetNames() { return Object.keys(this.state.morphTargets); }
+    getBoneNames() { return Object.keys(this.state.bones); }
 }
