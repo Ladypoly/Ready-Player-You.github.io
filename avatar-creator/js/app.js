@@ -89,34 +89,56 @@ class AvatarCreatorApp {
     }
 
     async applyRandomDefaults() {
-        // Random hair
-        const hairAssets = this.getAssetsForCategory('hair');
-        if (hairAssets.length > 0) {
-            const randomHair = hairAssets[Math.floor(Math.random() * hairAssets.length)];
-            await this.avatar.loadAsset('hair', randomHair.name);
-            this.selectedAssets['hair'] = randomHair.name;
-        }
+        console.log('Applying random defaults...');
 
-        // Random face morphs
-        const morphCategories = ['faceshape', 'eyeshape', 'noseshape', 'lipshape'];
-        for (const category of morphCategories) {
-            const assets = this.getAssetsForCategory(category);
-            if (assets.length > 0) {
-                const randomMorph = assets[Math.floor(Math.random() * assets.length)];
-                this.avatar.applyMorph(randomMorph.name, 0.5);
-                this.morphValues[randomMorph.name] = 0.5;
+        try {
+            // Random hair
+            const hairAssets = this.getAssetsForCategory('hair');
+            console.log(`Found ${hairAssets.length} hair assets`);
+            if (hairAssets.length > 0) {
+                const randomHair = hairAssets[Math.floor(Math.random() * hairAssets.length)];
+                console.log(`Loading hair: ${randomHair.name}`);
+                await this.avatar.loadAsset('hair', randomHair.name);
+                this.selectedAssets['hair'] = randomHair.name;
             }
-        }
 
-        // Random outfit (always give them clothes!)
-        const outfits = this.getAssetsForCategory('outfit');
-        if (outfits.length > 0) {
-            const randomOutfit = outfits[Math.floor(Math.random() * outfits.length)];
-            await this.avatar.loadAsset('outfit', randomOutfit.name);
-            this.selectedAssets['outfit'] = randomOutfit.name;
-        }
+            // Random face morphs
+            const morphCategories = ['faceshape', 'eyeshape', 'noseshape', 'lipshape'];
+            for (const category of morphCategories) {
+                const assets = this.getAssetsForCategory(category);
+                if (assets.length > 0) {
+                    const randomMorph = assets[Math.floor(Math.random() * assets.length)];
+                    this.avatar.applyMorph(randomMorph.name, 0.5);
+                    this.morphValues[randomMorph.name] = 0.5;
+                }
+            }
 
-        console.log('Applied random defaults');
+            // Random outfit (always give them clothes!)
+            const outfits = this.getAssetsForCategory('outfit');
+            console.log(`Found ${outfits.length} outfit assets`);
+            if (outfits.length > 0) {
+                const randomOutfit = outfits[Math.floor(Math.random() * outfits.length)];
+                console.log(`Loading outfit: ${randomOutfit.name}`);
+                await this.avatar.loadAsset('outfit', randomOutfit.name);
+                this.selectedAssets['outfit'] = randomOutfit.name;
+            } else {
+                // Fallback to individual pieces if no outfits
+                console.log('No outfits found, trying individual pieces...');
+                for (const category of ['top', 'bottom', 'footwear']) {
+                    const assets = this.getAssetsForCategory(category);
+                    if (assets.length > 0) {
+                        const randomAsset = assets[Math.floor(Math.random() * assets.length)];
+                        console.log(`Loading ${category}: ${randomAsset.name}`);
+                        await this.avatar.loadAsset(category, randomAsset.name);
+                        this.selectedAssets[category] = randomAsset.name;
+                    }
+                }
+            }
+
+            console.log('Applied random defaults successfully');
+        } catch (error) {
+            console.error('Error applying random defaults:', error);
+        }
     }
 
     async selectAsset(category, assetName) {

@@ -53,28 +53,23 @@ export class AvatarManager {
     async loadAvatar(avatarName) {
         console.log(`Loading avatar: ${avatarName}`);
 
+        // Remove all loaded assets first
+        this.clearAllAssets();
+
         // Remove existing avatar
         if (this.currentAvatar) {
+            console.log('Removing existing avatar from scene');
             this.scene.scene.remove(this.currentAvatar);
             this.disposeObject(this.currentAvatar);
             this.currentAvatar = null;
-            this.morphTargets = {};
-            this.meshes = {};
-            this.bones = {};
-            this.headBone = null;
-            this.loadedAssets = {
-                hair: null,
-                beard: null,
-                glasses: null,
-                top: null,
-                bottom: null,
-                footwear: null,
-                outfit: null,
-                facewear: null,
-                headwear: null,
-                facemask: null
-            };
         }
+
+        // Reset all state
+        this.morphTargets = {};
+        this.meshes = {};
+        this.bones = {};
+        this.headBone = null;
+        this.hipsBone = null;
 
         const path = `${this.basePath}/avatars/${avatarName}.glb`;
 
@@ -521,6 +516,19 @@ export class AvatarManager {
         } else {
             this.showBody();
         }
+    }
+
+    /**
+     * Clear ALL loaded assets (used when switching avatars)
+     */
+    clearAllAssets() {
+        const categories = ['hair', 'beard', 'glasses', 'top', 'bottom', 'footwear', 'outfit', 'facewear', 'headwear', 'facemask'];
+        for (const category of categories) {
+            if (this.loadedAssets[category]) {
+                this.removeAsset(category);
+            }
+        }
+        console.log('Cleared all assets');
     }
 
     /**
