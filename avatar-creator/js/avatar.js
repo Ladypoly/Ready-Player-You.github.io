@@ -491,24 +491,40 @@ export class AvatarManager {
 
     applySkinColorToModel(model) {
         model.traverse((child) => {
-            if (child.isMesh && this.isSkinMesh(child.name)) {
-                if (child.material) {
-                    child.material.color = this.skinColor.clone();
-                    child.material.needsUpdate = true;
+            if (child.isMesh) {
+                const meshMatch = this.isSkinMesh(child.name);
+                const materialMatch = child.material && this.isSkinMaterial(child.material);
+
+                if (meshMatch || materialMatch) {
+                    if (child.material) {
+                        child.material.color = this.skinColor.clone();
+                        child.material.needsUpdate = true;
+                    }
                 }
             }
         });
+    }
+
+    isSkinMaterial(material) {
+        if (!material || !material.name) return false;
+        const lower = material.name.toLowerCase();
+        return lower.includes('skin') ||
+               lower.includes('body') ||
+               lower.includes('wolf3d_skin') ||
+               lower.includes('wolf3d_body');
     }
 
     isSkinMesh(name) {
         const lower = name.toLowerCase();
         return lower.includes('skin') ||
                lower.includes('body') ||
+               lower.includes('head') ||
                lower.includes('arm') ||
                lower.includes('hand') ||
                lower.includes('leg') ||
                lower.includes('foot') ||
-               lower.includes('wolf3d_body');
+               lower.includes('wolf3d_body') ||
+               lower.includes('wolf3d_head');
     }
 
     getHairColor() { return '#' + this.hairColor.getHexString(); }
