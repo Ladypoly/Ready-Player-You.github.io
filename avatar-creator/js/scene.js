@@ -54,40 +54,93 @@ export class Scene3D {
         this.renderer = new THREE.WebGLRenderer({
             antialias: true,
             alpha: true,
+            powerPreference: 'high-performance',
         });
         this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
         this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         this.renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+        // Cinematic tone mapping
         this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        this.renderer.toneMappingExposure = 1.0;
+        this.renderer.toneMappingExposure = 1.1;
+
+        // High quality shadows
         this.renderer.shadowMap.enabled = true;
         this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+        // Enable physically correct lighting
+        this.renderer.useLegacyLights = false;
 
         this.container.appendChild(this.renderer.domElement);
     }
 
     setupLighting() {
-        // Ambient light
-        const ambient = new THREE.AmbientLight(0xffffff, 0.5);
+        // ============================================
+        // CINEMATIC 3-POINT LIGHTING SETUP
+        // ============================================
+
+        // Soft ambient fill - very subtle to keep shadows dramatic
+        const ambient = new THREE.AmbientLight(0x404050, 0.3);
         this.scene.add(ambient);
 
-        // Main key light
-        const keyLight = new THREE.DirectionalLight(0xffffff, 1.0);
-        keyLight.position.set(2, 3, 2);
+        // ---- KEY LIGHT ----
+        // Main light source, warm tone, positioned 45° right and above
+        const keyLight = new THREE.DirectionalLight(0xfff5e6, 1.2);
+        keyLight.position.set(3, 4, 3);
+        keyLight.target.position.set(0, 1.2, 0);
         keyLight.castShadow = true;
-        keyLight.shadow.mapSize.width = 1024;
-        keyLight.shadow.mapSize.height = 1024;
+        keyLight.shadow.mapSize.width = 2048;
+        keyLight.shadow.mapSize.height = 2048;
+        keyLight.shadow.camera.near = 0.5;
+        keyLight.shadow.camera.far = 15;
+        keyLight.shadow.camera.left = -3;
+        keyLight.shadow.camera.right = 3;
+        keyLight.shadow.camera.top = 3;
+        keyLight.shadow.camera.bottom = -3;
+        keyLight.shadow.bias = -0.0001;
+        keyLight.shadow.radius = 4; // Soft shadow edges
         this.scene.add(keyLight);
+        this.scene.add(keyLight.target);
 
-        // Fill light
-        const fillLight = new THREE.DirectionalLight(0xe93392, 0.3);
-        fillLight.position.set(-2, 1, 2);
+        // ---- FILL LIGHT ----
+        // Softer, cooler light from opposite side to fill shadows
+        const fillLight = new THREE.DirectionalLight(0xc4d4ff, 0.4);
+        fillLight.position.set(-3, 2, 2);
+        fillLight.target.position.set(0, 1.2, 0);
         this.scene.add(fillLight);
+        this.scene.add(fillLight.target);
 
-        // Rim light
-        const rimLight = new THREE.DirectionalLight(0x1d77d6, 0.4);
-        rimLight.position.set(0, 2, -2);
+        // ---- RIM LIGHT (Back Light) ----
+        // Strong edge light from behind for silhouette separation
+        const rimLight = new THREE.DirectionalLight(0xff6b9d, 0.8);
+        rimLight.position.set(-1, 3, -3);
+        rimLight.target.position.set(0, 1.2, 0);
         this.scene.add(rimLight);
+        this.scene.add(rimLight.target);
+
+        // ---- SECONDARY RIM (Accent) ----
+        // Blue accent rim from other side for color contrast
+        const accentRim = new THREE.DirectionalLight(0x4da6ff, 0.6);
+        accentRim.position.set(2, 2, -2.5);
+        accentRim.target.position.set(0, 1.2, 0);
+        this.scene.add(accentRim);
+        this.scene.add(accentRim.target);
+
+        // ---- GROUND BOUNCE ----
+        // Subtle upward light simulating ground reflection
+        const bounceLight = new THREE.DirectionalLight(0x8888aa, 0.15);
+        bounceLight.position.set(0, -2, 1);
+        bounceLight.target.position.set(0, 1, 0);
+        this.scene.add(bounceLight);
+        this.scene.add(bounceLight.target);
+
+        // ---- TOP HAIR LIGHT ----
+        // Subtle overhead light to catch hair highlights
+        const hairLight = new THREE.SpotLight(0xffffff, 0.5, 10, Math.PI / 6, 0.5, 1);
+        hairLight.position.set(0, 4, 0.5);
+        hairLight.target.position.set(0, 1.6, 0);
+        this.scene.add(hairLight);
+        this.scene.add(hairLight.target);
     }
 
     setupControls() {
@@ -108,18 +161,32 @@ export class Scene3D {
     }
 
     setupBackground() {
-        // Gradient background using a plane
+        // Cinematic gradient background
         const canvas = document.createElement('canvas');
-        canvas.width = 2;
+        canvas.width = 512;
         canvas.height = 512;
         const ctx = canvas.getContext('2d');
 
-        const gradient = ctx.createLinearGradient(0, 0, 0, 512);
-        gradient.addColorStop(0, '#1a1a2e');
-        gradient.addColorStop(0.5, '#16162a');
-        gradient.addColorStop(1, '#0d0d15');
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, 2, 512);
+        // Radial gradient for depth - darker edges, subtle center glow
+        const radialGradient = ctx.createRadialGradient(256, 200, 0, 256, 256, 400);
+        radialGradient.addColorStop(0, '#252535');
+        radialGradient.addColorStop(0.5, '#1a1a28');
+        radialGradient.addColorStop(1, '#0a0a12');
+        ctx.fillStyle = radialGradient;
+        ctx.fillRect(0, 0, 512, 512);
+
+        // Add subtle color accents matching rim lights
+        const pinkGlow = ctx.createRadialGradient(100, 150, 0, 100, 150, 200);
+        pinkGlow.addColorStop(0, 'rgba(255, 107, 157, 0.08)');
+        pinkGlow.addColorStop(1, 'rgba(255, 107, 157, 0)');
+        ctx.fillStyle = pinkGlow;
+        ctx.fillRect(0, 0, 512, 512);
+
+        const blueGlow = ctx.createRadialGradient(420, 180, 0, 420, 180, 180);
+        blueGlow.addColorStop(0, 'rgba(77, 166, 255, 0.06)');
+        blueGlow.addColorStop(1, 'rgba(77, 166, 255, 0)');
+        ctx.fillStyle = blueGlow;
+        ctx.fillRect(0, 0, 512, 512);
 
         const texture = new THREE.CanvasTexture(canvas);
         this.scene.background = texture;
