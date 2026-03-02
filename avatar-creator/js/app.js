@@ -302,17 +302,17 @@ class AvatarCreatorApp {
             }
         }
 
-        // Smart clothing randomization: 50% full outfit, 50% individual pieces
-        if (Math.random() < 0.5) {
-            // Option A: Full outfit
+        // Clothing: Female gets outfits, Male gets individual pieces
+        // (All 111 outfits in the catalog are female-specific)
+        if (this.currentGender === 'female') {
+            // Female: use outfit
             const outfits = this.getAssetsForCategory('outfit');
             if (outfits.length > 0) {
                 const randomOutfit = outfits[Math.floor(Math.random() * outfits.length)];
                 this.selectAsset('outfit', randomOutfit.name);
-                // Mutual exclusion in avatar.js auto-clears individual clothing
             }
         } else {
-            // Option B: Individual pieces
+            // Male: use individual pieces (no male outfits exist)
             this.selectAsset('outfit', 'none'); // Clear any outfit first
 
             for (const category of ['top', 'bottom', 'footwear']) {
