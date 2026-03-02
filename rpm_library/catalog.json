@@ -4701,12 +4701,30 @@
       ]
     },
     "outfit": {
-      "count": 111,
+      "count": 211,
       "items": [
+        {
+          "name": "outfit-adventure-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
         {
           "name": "outfit-angel-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-angel-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4722,9 +4740,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-archer-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-autumn-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-autumn-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4740,9 +4776,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-autumn-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-autumn-03-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-autumn-03-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4758,9 +4812,45 @@
           "hasMask": false
         },
         {
+          "name": "outfit-backtoschool-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-backtoschool-02-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-backtoschool-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-backtoschool-03-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-backtoschool-04-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4785,9 +4875,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-basic-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-basicrpm-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-basicrpm-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4803,6 +4911,24 @@
           "hasMask": false
         },
         {
+          "name": "outfit-basicrpm-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-blackfriday-turkey-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-blackfriday-vrgamer-v2-f",
           "type": "outfit",
           "gender": "neutral",
@@ -4812,9 +4938,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-blackfriday-vrgamer-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-bodysuitscarf-03-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-casual-09-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4839,9 +4983,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-casualoversized-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-casualoversized-02-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-casualoversized-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4857,9 +5019,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-cheer-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-cheer-02-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-cheer-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4875,9 +5055,36 @@
           "hasMask": false
         },
         {
+          "name": "outfit-cheer-03-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-cheer-04-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-cheer-04-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-christmas-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4893,9 +5100,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-christmas-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-christmas-03-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-christmas-03-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4911,9 +5136,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-christmas-04-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-classic-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classic-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4929,9 +5172,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-classic-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-classic-03-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classic-03-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4947,9 +5208,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-classic-04-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-classic-05-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classic-05-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4965,9 +5244,36 @@
           "hasMask": false
         },
         {
+          "name": "outfit-classic-06-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classic-07-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-classicoversized-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-classicoversized-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -4983,9 +5289,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-costume-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-costume-02-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-costume-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -5001,6 +5325,15 @@
           "hasMask": false
         },
         {
+          "name": "outfit-costume-03-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-costume-04-v2-f",
           "type": "outfit",
           "gender": "neutral",
@@ -5010,9 +5343,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-costume-04-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-cupra-09-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-cupra-09-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -5031,6 +5382,15 @@
           "name": "outfit-doctor-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-doctor-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -5478,6 +5838,15 @@
           "hasMask": false
         },
         {
+          "name": "outfit-golf-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-halloween-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
@@ -5487,9 +5856,63 @@
           "hasMask": false
         },
         {
+          "name": "outfit-halloween-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-halloween-02-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-halloween-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-halloween-03-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-indiangujrathi-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-Look1-CalvinKlein-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-Look2-CalvinKlein-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -5523,9 +5946,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-Look5-CalvinKlein-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-Look6-CalvinKlein-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-Look6-CalvinKlein-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -5541,9 +5982,369 @@
           "hasMask": false
         },
         {
+          "name": "outfit-m-casual-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-casual-02-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-casual-03-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-casual-04-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-casual-05-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-casual-06-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-casual-07-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-casualtie-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-casualtie-02-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-casualtie-03-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-casualtie-04-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-cyberpunk-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-cyberpunk-02-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-cyberpunk-03-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-indiancricket-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-medievaltaurus-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-military-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-office-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-office-02-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-office-03-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-office-04-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-office-05-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-overall-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-overall-02-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-overall-03-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-pajamas-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-pajamas-02-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-scifi-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-scifi-02-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-scifi-03-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-starwarstaurus-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-starwarstaurus-02-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-streetwear-01-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-streetwear-02-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-streetwear-03-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-streetwear-04-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-streetwear-05-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-streetwear-06-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-m-streetwear-07-v2",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-matrix-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-matrix-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -5586,9 +6387,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-mechanic-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-overall-04-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-overall-04-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -5604,9 +6423,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-overall-05-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-police-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-police-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -5622,6 +6459,15 @@
           "hasMask": false
         },
         {
+          "name": "outfit-racing-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-racing-02-v2-f",
           "type": "outfit",
           "gender": "neutral",
@@ -5631,9 +6477,27 @@
           "hasMask": false
         },
         {
+          "name": "outfit-racing-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-rogue-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-rogue-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -5667,6 +6531,15 @@
           "hasMask": false
         },
         {
+          "name": "outfit-snowboard-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-snowboard-02-v2-f",
           "type": "outfit",
           "gender": "neutral",
@@ -5685,6 +6558,15 @@
           "hasMask": false
         },
         {
+          "name": "outfit-snowboard-06-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
           "name": "outfit-valentinecolorblockdress-02-v2-f",
           "type": "outfit",
           "gender": "neutral",
@@ -5697,6 +6579,24 @@
           "name": "outfit-wedding-01-v2-f",
           "type": "outfit",
           "gender": "neutral",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-wedding-01-v2-m",
+          "type": "outfit",
+          "gender": "male",
+          "hasModel": true,
+          "hasTexture": false,
+          "hasThumbnail": true,
+          "hasMask": false
+        },
+        {
+          "name": "outfit-wedding-02-v2-m",
+          "type": "outfit",
+          "gender": "male",
           "hasModel": true,
           "hasTexture": false,
           "hasThumbnail": true,
@@ -6106,5 +7006,5 @@
       ]
     }
   },
-  "totalAssets": 607
+  "totalAssets": 707
 }
