@@ -89,55 +89,89 @@ class AvatarCreatorApp {
     }
 
     async applyRandomDefaults() {
-        console.log('Applying random defaults...');
+        console.log(`Applying random defaults for gender: ${this.currentGender}`);
 
-        try {
-            // Random hair
-            const hairAssets = this.getAssetsForCategory('hair');
-            console.log(`Found ${hairAssets.length} hair assets`);
-            if (hairAssets.length > 0) {
-                const randomHair = hairAssets[Math.floor(Math.random() * hairAssets.length)];
-                console.log(`Loading hair: ${randomHair.name}`);
+        // Random hair - try up to 3 times if asset fails to load
+        const hairAssets = this.getAssetsForCategory('hair');
+        console.log(`Found ${hairAssets.length} hair assets`);
+
+        let hairLoaded = false;
+        const triedHair = new Set();
+        for (let i = 0; i < Math.min(5, hairAssets.length) && !hairLoaded; i++) {
+            const randomHair = hairAssets[Math.floor(Math.random() * hairAssets.length)];
+            if (triedHair.has(randomHair.name)) continue;
+            triedHair.add(randomHair.name);
+            try {
                 await this.avatar.loadAsset('hair', randomHair.name);
                 this.selectedAssets['hair'] = randomHair.name;
+                hairLoaded = true;
+            } catch (error) {
+                console.warn(`Hair ${randomHair.name} failed`);
             }
+        }
 
-            // Random face morphs
-            const morphCategories = ['faceshape', 'eyeshape', 'noseshape', 'lipshape'];
-            for (const category of morphCategories) {
-                const assets = this.getAssetsForCategory(category);
-                if (assets.length > 0) {
-                    const randomMorph = assets[Math.floor(Math.random() * assets.length)];
-                    this.avatar.applyMorph(randomMorph.name, 0.5);
-                    this.morphValues[randomMorph.name] = 0.5;
+        // Random face morphs
+        const morphCategories = ['faceshape', 'eyeshape', 'noseshape', 'lipshape'];
+        for (const category of morphCategories) {
+            const assets = this.getAssetsForCategory(category);
+            if (assets.length > 0) {
+                const randomMorph = assets[Math.floor(Math.random() * assets.length)];
+                this.avatar.applyMorph(randomMorph.name, 0.5);
+                this.morphValues[randomMorph.name] = 0.5;
+            }
+        }
+
+        // Clothing strategy:
+        // - Female: use outfits (all 111 outfits are female-specific)
+        // - Male: use individual pieces (top + bottom + footwear are neutral)
+
+        if (this.currentGender === 'female') {
+            // Female gets an outfit
+            const outfits = this.getAssetsForCategory('outfit');
+            console.log(`Found ${outfits.length} outfits for female`);
+
+            let outfitLoaded = false;
+            const triedOutfits = new Set();
+            for (let i = 0; i < Math.min(5, outfits.length) && !outfitLoaded; i++) {
+                const randomOutfit = outfits[Math.floor(Math.random() * outfits.length)];
+                if (triedOutfits.has(randomOutfit.name)) continue;
+                triedOutfits.add(randomOutfit.name);
+                try {
+                    await this.avatar.loadAsset('outfit', randomOutfit.name);
+                    this.selectedAssets['outfit'] = randomOutfit.name;
+                    outfitLoaded = true;
+                } catch (error) {
+                    console.warn(`Outfit ${randomOutfit.name} failed`);
                 }
             }
+        } else {
+            // Male uses individual pieces (no male outfits exist)
+            console.log('Male avatar: using individual pieces');
+            await this.loadRandomIndividualClothing();
+        }
 
-            // Random outfit (always give them clothes!)
-            const outfits = this.getAssetsForCategory('outfit');
-            console.log(`Found ${outfits.length} outfit assets`);
-            if (outfits.length > 0) {
-                const randomOutfit = outfits[Math.floor(Math.random() * outfits.length)];
-                console.log(`Loading outfit: ${randomOutfit.name}`);
-                await this.avatar.loadAsset('outfit', randomOutfit.name);
-                this.selectedAssets['outfit'] = randomOutfit.name;
-            } else {
-                // Fallback to individual pieces if no outfits
-                console.log('No outfits found, trying individual pieces...');
-                for (const category of ['top', 'bottom', 'footwear']) {
-                    const assets = this.getAssetsForCategory(category);
-                    if (assets.length > 0) {
-                        const randomAsset = assets[Math.floor(Math.random() * assets.length)];
-                        console.log(`Loading ${category}: ${randomAsset.name}`);
+        console.log('Random defaults applied');
+    }
+
+    async loadRandomIndividualClothing() {
+        for (const category of ['top', 'bottom', 'footwear']) {
+            const assets = this.getAssetsForCategory(category);
+            if (assets.length > 0) {
+                let loaded = false;
+                const tried = new Set();
+                for (let i = 0; i < Math.min(3, assets.length) && !loaded; i++) {
+                    const randomAsset = assets[Math.floor(Math.random() * assets.length)];
+                    if (tried.has(randomAsset.name)) continue;
+                    tried.add(randomAsset.name);
+                    try {
                         await this.avatar.loadAsset(category, randomAsset.name);
                         this.selectedAssets[category] = randomAsset.name;
+                        loaded = true;
+                    } catch (error) {
+                        console.warn(`${category} ${randomAsset.name} failed`);
                     }
                 }
             }
-
-            console.log('Applied random defaults successfully');
-        } catch (error) {
-            console.error('Error applying random defaults:', error);
         }
     }
 
@@ -171,7 +205,7 @@ class AvatarCreatorApp {
 
         const gender = this.currentGender;
 
-        return typeData.items.filter(item => {
+        const filtered = typeData.items.filter(item => {
             // Beard only for male
             if (category === 'beard' && gender === 'female') {
                 return false;
@@ -179,30 +213,17 @@ class AvatarCreatorApp {
 
             const name = item.name.toLowerCase();
 
-            // Check for gender-specific naming patterns
-            // Female patterns: -f-, -f, -v2-f, _f_, -female, outfit-f-
-            const isFemaleAsset =
-                name.includes('-f-') ||
-                name.endsWith('-f') ||
-                name.includes('-v2-f') ||
-                name.includes('_f_') ||
-                name.includes('-female') ||
-                name.includes('outfit-f-') ||
-                name.includes('dress') ||  // Dresses are typically female
-                name.includes('-cheer-');   // Cheerleader outfits
-
-            // Male patterns: -m-, -m, -v2-m, _m_, -male, outfit-m-
-            const isMaleAsset =
-                name.includes('-m-') ||
-                name.endsWith('-m') ||
-                name.includes('-v2-m') ||
-                name.includes('_m_') ||
-                name.includes('-male') ||
-                name.includes('outfit-m-');
+            // Check for female-specific patterns
+            const isFemaleAsset = this.isAssetForGender(name, 'female');
+            const isMaleAsset = this.isAssetForGender(name, 'male');
 
             // If asset is gender-specific, must match current gender
-            if (isFemaleAsset && gender !== 'female') return false;
-            if (isMaleAsset && gender !== 'male') return false;
+            if (isFemaleAsset && gender !== 'female') {
+                return false;
+            }
+            if (isMaleAsset && gender !== 'male') {
+                return false;
+            }
 
             // Also check metadata gender field
             if (item.gender && item.gender !== 'neutral' && item.gender !== gender) {
@@ -211,6 +232,35 @@ class AvatarCreatorApp {
 
             return true;
         });
+
+        return filtered;
+    }
+
+    /**
+     * Check if asset name indicates a specific gender
+     */
+    isAssetForGender(name, targetGender) {
+        if (targetGender === 'female') {
+            return name.includes('-f-') ||
+                   name.endsWith('-f') ||
+                   name.includes('-v2-f') ||
+                   name.includes('_f_') ||
+                   name.includes('-female') ||
+                   name.match(/outfit-f[^a-z]/) ||  // outfit-f followed by non-letter
+                   name.includes('dress') ||
+                   name.includes('skirt') ||
+                   name.includes('-cheer-') ||
+                   name.includes('wedding') ||
+                   name.includes('angel-') && name.includes('-f');
+        } else if (targetGender === 'male') {
+            return name.includes('-m-') ||
+                   name.endsWith('-m') ||
+                   name.includes('-v2-m') ||
+                   name.includes('_m_') ||
+                   name.includes('-male') ||
+                   name.match(/outfit-m[^a-z]/);  // outfit-m followed by non-letter
+        }
+        return false;
     }
 
     showLoading() {
