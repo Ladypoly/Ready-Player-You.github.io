@@ -55,7 +55,7 @@ export class AvatarManager {
 
         // Remove existing avatar
         if (this.currentAvatar) {
-            this.scene.remove(this.currentAvatar);
+            this.scene.scene.remove(this.currentAvatar);
             this.disposeObject(this.currentAvatar);
             this.currentAvatar = null;
             this.morphTargets = {};
@@ -113,7 +113,7 @@ export class AvatarManager {
             });
 
             // Add to scene
-            this.scene.add(this.currentAvatar);
+            this.scene.scene.add(this.currentAvatar);
 
             // Determine gender from name
             this.currentGender = avatarName.includes('female') ? 'female' : 'male';

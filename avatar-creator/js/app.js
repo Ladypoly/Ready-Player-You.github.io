@@ -77,11 +77,46 @@ class AvatarCreatorApp {
 
         try {
             await this.avatar.loadBase(gender);
+
+            // Apply random defaults since base avatar is minimal
+            await this.applyRandomDefaults();
+
             this.hideLoading();
         } catch (error) {
             console.error('Failed to load avatar:', error);
             this.hideLoading();
         }
+    }
+
+    async applyRandomDefaults() {
+        // Random hair
+        const hairAssets = this.getAssetsForCategory('hair');
+        if (hairAssets.length > 0) {
+            const randomHair = hairAssets[Math.floor(Math.random() * hairAssets.length)];
+            await this.avatar.loadAsset('hair', randomHair.name);
+            this.selectedAssets['hair'] = randomHair.name;
+        }
+
+        // Random face morphs
+        const morphCategories = ['faceshape', 'eyeshape', 'noseshape', 'lipshape'];
+        for (const category of morphCategories) {
+            const assets = this.getAssetsForCategory(category);
+            if (assets.length > 0) {
+                const randomMorph = assets[Math.floor(Math.random() * assets.length)];
+                this.avatar.applyMorph(randomMorph.name, 0.5);
+                this.morphValues[randomMorph.name] = 0.5;
+            }
+        }
+
+        // Random outfit (always give them clothes!)
+        const outfits = this.getAssetsForCategory('outfit');
+        if (outfits.length > 0) {
+            const randomOutfit = outfits[Math.floor(Math.random() * outfits.length)];
+            await this.avatar.loadAsset('outfit', randomOutfit.name);
+            this.selectedAssets['outfit'] = randomOutfit.name;
+        }
+
+        console.log('Applied random defaults');
     }
 
     async selectAsset(category, assetName) {
