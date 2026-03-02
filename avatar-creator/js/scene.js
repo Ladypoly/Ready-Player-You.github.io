@@ -77,76 +77,73 @@ export class Scene3D {
     }
 
     setupLighting() {
+        // Store lights for debug panel access
+        this.lights = {};
+
         // ============================================
         // CINEMATIC 3-POINT LIGHTING SETUP (BRIGHT)
         // ============================================
 
         // Hemisphere light for natural sky/ground ambient
-        const hemi = new THREE.HemisphereLight(0xffeedd, 0x8888aa, 0.6);
-        this.scene.add(hemi);
+        this.lights.hemi = new THREE.HemisphereLight(0xffeedd, 0x8888aa, 0.6);
+        this.scene.add(this.lights.hemi);
 
         // Soft ambient fill
-        const ambient = new THREE.AmbientLight(0xffffff, 0.4);
-        this.scene.add(ambient);
+        this.lights.ambient = new THREE.AmbientLight(0xffffff, 0.4);
+        this.scene.add(this.lights.ambient);
 
         // ---- KEY LIGHT ----
-        // Main light source, warm tone, positioned 45° right and above
-        const keyLight = new THREE.DirectionalLight(0xfff8f0, 2.0);
-        keyLight.position.set(3, 4, 3);
-        keyLight.target.position.set(0, 1.2, 0);
-        keyLight.castShadow = true;
-        keyLight.shadow.mapSize.width = 2048;
-        keyLight.shadow.mapSize.height = 2048;
-        keyLight.shadow.camera.near = 0.5;
-        keyLight.shadow.camera.far = 15;
-        keyLight.shadow.camera.left = -3;
-        keyLight.shadow.camera.right = 3;
-        keyLight.shadow.camera.top = 3;
-        keyLight.shadow.camera.bottom = -3;
-        keyLight.shadow.bias = -0.0001;
-        keyLight.shadow.radius = 4;
-        this.scene.add(keyLight);
-        this.scene.add(keyLight.target);
+        this.lights.key = new THREE.DirectionalLight(0xfff8f0, 2.0);
+        this.lights.key.position.set(3, 4, 3);
+        this.lights.key.target.position.set(0, 1.2, 0);
+        this.lights.key.castShadow = true;
+        this.lights.key.shadow.mapSize.width = 2048;
+        this.lights.key.shadow.mapSize.height = 2048;
+        this.lights.key.shadow.camera.near = 0.5;
+        this.lights.key.shadow.camera.far = 15;
+        this.lights.key.shadow.camera.left = -3;
+        this.lights.key.shadow.camera.right = 3;
+        this.lights.key.shadow.camera.top = 3;
+        this.lights.key.shadow.camera.bottom = -3;
+        this.lights.key.shadow.bias = -0.0001;
+        this.lights.key.shadow.radius = 4;
+        this.scene.add(this.lights.key);
+        this.scene.add(this.lights.key.target);
 
         // ---- FILL LIGHT ----
-        // Softer, cooler light from opposite side to fill shadows
-        const fillLight = new THREE.DirectionalLight(0xd4e4ff, 0.8);
-        fillLight.position.set(-3, 2, 2);
-        fillLight.target.position.set(0, 1.2, 0);
-        this.scene.add(fillLight);
-        this.scene.add(fillLight.target);
+        this.lights.fill = new THREE.DirectionalLight(0xd4e4ff, 0.8);
+        this.lights.fill.position.set(-3, 2, 2);
+        this.lights.fill.target.position.set(0, 1.2, 0);
+        this.scene.add(this.lights.fill);
+        this.scene.add(this.lights.fill.target);
 
         // ---- RIM LIGHT (Back Light) ----
-        // Strong edge light from behind for silhouette separation
-        const rimLight = new THREE.DirectionalLight(0xff6b9d, 1.2);
-        rimLight.position.set(-1, 3, -3);
-        rimLight.target.position.set(0, 1.2, 0);
-        this.scene.add(rimLight);
-        this.scene.add(rimLight.target);
+        this.lights.rim = new THREE.DirectionalLight(0xff6b9d, 1.2);
+        this.lights.rim.position.set(-1, 3, -3);
+        this.lights.rim.target.position.set(0, 1.2, 0);
+        this.scene.add(this.lights.rim);
+        this.scene.add(this.lights.rim.target);
 
         // ---- SECONDARY RIM (Accent) ----
-        // Blue accent rim from other side for color contrast
-        const accentRim = new THREE.DirectionalLight(0x4da6ff, 1.0);
-        accentRim.position.set(2, 2, -2.5);
-        accentRim.target.position.set(0, 1.2, 0);
-        this.scene.add(accentRim);
-        this.scene.add(accentRim.target);
+        this.lights.accent = new THREE.DirectionalLight(0x4da6ff, 1.0);
+        this.lights.accent.position.set(2, 2, -2.5);
+        this.lights.accent.target.position.set(0, 1.2, 0);
+        this.scene.add(this.lights.accent);
+        this.scene.add(this.lights.accent.target);
 
         // ---- FRONT FILL ----
-        // Additional front fill to brighten face
-        const frontFill = new THREE.DirectionalLight(0xffffff, 0.5);
-        frontFill.position.set(0, 2, 4);
-        frontFill.target.position.set(0, 1.2, 0);
-        this.scene.add(frontFill);
-        this.scene.add(frontFill.target);
+        this.lights.front = new THREE.DirectionalLight(0xffffff, 0.5);
+        this.lights.front.position.set(0, 2, 4);
+        this.lights.front.target.position.set(0, 1.2, 0);
+        this.scene.add(this.lights.front);
+        this.scene.add(this.lights.front.target);
 
         // ---- TOP HAIR LIGHT ----
-        // Overhead light to catch hair highlights
-        const hairLight = new THREE.SpotLight(0xffffff, 1.0, 10, Math.PI / 5, 0.5, 1);
-        hairLight.position.set(0, 4, 0.5);
-        hairLight.target.position.set(0, 1.6, 0);
-        this.scene.add(hairLight);
-        this.scene.add(hairLight.target);
+        this.lights.hair = new THREE.SpotLight(0xffffff, 1.0, 10, Math.PI / 5, 0.5, 1);
+        this.lights.hair.position.set(0, 4, 0.5);
+        this.lights.hair.target.position.set(0, 1.6, 0);
+        this.scene.add(this.lights.hair);
+        this.scene.add(this.lights.hair.target);
     }
 
     setupControls() {
@@ -202,12 +199,32 @@ export class Scene3D {
     }
 
     setupGroundPlane() {
-        // Ground plane
+        // Create gradient texture for fading floor
+        const floorCanvas = document.createElement('canvas');
+        floorCanvas.width = 512;
+        floorCanvas.height = 512;
+        const fCtx = floorCanvas.getContext('2d');
+
+        // Radial gradient - solid center fading to transparent edges
+        const floorGradient = fCtx.createRadialGradient(256, 256, 0, 256, 256, 256);
+        floorGradient.addColorStop(0, 'rgba(25, 25, 35, 0.9)');
+        floorGradient.addColorStop(0.3, 'rgba(25, 25, 35, 0.7)');
+        floorGradient.addColorStop(0.6, 'rgba(25, 25, 35, 0.4)');
+        floorGradient.addColorStop(0.8, 'rgba(25, 25, 35, 0.15)');
+        floorGradient.addColorStop(1, 'rgba(25, 25, 35, 0)');
+        fCtx.fillStyle = floorGradient;
+        fCtx.fillRect(0, 0, 512, 512);
+
+        const floorTexture = new THREE.CanvasTexture(floorCanvas);
+
+        // Ground plane with transparency
         const groundGeo = new THREE.CircleGeometry(3, 64);
         const groundMat = new THREE.MeshStandardMaterial({
-            color: 0x1a1a22,
-            roughness: 0.8,
-            metalness: 0.2,
+            map: floorTexture,
+            transparent: true,
+            roughness: 0.9,
+            metalness: 0.1,
+            depthWrite: false,
         });
         const ground = new THREE.Mesh(groundGeo, groundMat);
         ground.rotation.x = -Math.PI / 2;

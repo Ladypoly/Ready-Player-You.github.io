@@ -473,103 +473,200 @@ export class UIController {
         panel.id = 'debugPanel';
         panel.innerHTML = `
             <div class="debug-header">
-                <span>Debug: Asset Offsets</span>
+                <span>Debug Panel</span>
                 <button id="debugToggle">−</button>
             </div>
             <div class="debug-content">
-                <div class="debug-section">
-                    <h4>Hair Offset</h4>
-                    <div class="debug-row">
-                        <label>X:</label>
-                        <input type="range" id="hairOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="hairOffsetXVal">0.00</span>
+                <!-- Tab Navigation -->
+                <div class="debug-tabs">
+                    <button class="debug-tab active" data-tab="lighting">Lighting</button>
+                    <button class="debug-tab" data-tab="offsets">Offsets</button>
+                </div>
+
+                <!-- Lighting Tab -->
+                <div class="debug-tab-content" id="tab-lighting">
+                    <div class="debug-section">
+                        <h4>Exposure</h4>
+                        <div class="debug-row">
+                            <label>Exp:</label>
+                            <input type="range" id="lightExposure" min="0.5" max="3" step="0.05" value="1.3">
+                            <span id="lightExposureVal">1.30</span>
+                        </div>
                     </div>
-                    <div class="debug-row">
-                        <label>Y:</label>
-                        <input type="range" id="hairOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="hairOffsetYVal">0.00</span>
+                    <div class="debug-section">
+                        <h4>Ambient</h4>
+                        <div class="debug-row">
+                            <label>Int:</label>
+                            <input type="range" id="lightAmbient" min="0" max="2" step="0.05" value="0.4">
+                            <span id="lightAmbientVal">0.40</span>
+                        </div>
                     </div>
-                    <div class="debug-row">
-                        <label>Z:</label>
-                        <input type="range" id="hairOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="hairOffsetZVal">0.00</span>
+                    <div class="debug-section">
+                        <h4>Key Light</h4>
+                        <div class="debug-row">
+                            <label>Int:</label>
+                            <input type="range" id="lightKey" min="0" max="5" step="0.1" value="2.0">
+                            <span id="lightKeyVal">2.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Color:</label>
+                            <input type="color" id="lightKeyColor" value="#fff8f0">
+                        </div>
+                    </div>
+                    <div class="debug-section">
+                        <h4>Fill Light</h4>
+                        <div class="debug-row">
+                            <label>Int:</label>
+                            <input type="range" id="lightFill" min="0" max="3" step="0.1" value="0.8">
+                            <span id="lightFillVal">0.80</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Color:</label>
+                            <input type="color" id="lightFillColor" value="#d4e4ff">
+                        </div>
+                    </div>
+                    <div class="debug-section">
+                        <h4>Rim Light (Pink)</h4>
+                        <div class="debug-row">
+                            <label>Int:</label>
+                            <input type="range" id="lightRim" min="0" max="3" step="0.1" value="1.2">
+                            <span id="lightRimVal">1.20</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Color:</label>
+                            <input type="color" id="lightRimColor" value="#ff6b9d">
+                        </div>
+                    </div>
+                    <div class="debug-section">
+                        <h4>Accent Rim (Blue)</h4>
+                        <div class="debug-row">
+                            <label>Int:</label>
+                            <input type="range" id="lightAccent" min="0" max="3" step="0.1" value="1.0">
+                            <span id="lightAccentVal">1.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Color:</label>
+                            <input type="color" id="lightAccentColor" value="#4da6ff">
+                        </div>
+                    </div>
+                    <div class="debug-section">
+                        <h4>Front Fill</h4>
+                        <div class="debug-row">
+                            <label>Int:</label>
+                            <input type="range" id="lightFront" min="0" max="2" step="0.1" value="0.5">
+                            <span id="lightFrontVal">0.50</span>
+                        </div>
+                    </div>
+                    <div class="debug-section">
+                        <h4>Hair Light</h4>
+                        <div class="debug-row">
+                            <label>Int:</label>
+                            <input type="range" id="lightHair" min="0" max="3" step="0.1" value="1.0">
+                            <span id="lightHairVal">1.00</span>
+                        </div>
+                    </div>
+                    <div class="debug-output">
+                        <button id="copyLighting">Copy Light Values</button>
+                        <pre id="lightValues"></pre>
                     </div>
                 </div>
-                <div class="debug-section">
-                    <h4>Beard Offset</h4>
-                    <div class="debug-row">
-                        <label>X:</label>
-                        <input type="range" id="beardOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="beardOffsetXVal">0.00</span>
+
+                <!-- Offsets Tab -->
+                <div class="debug-tab-content hidden" id="tab-offsets">
+                    <div class="debug-section">
+                        <h4>Hair Offset</h4>
+                        <div class="debug-row">
+                            <label>X:</label>
+                            <input type="range" id="hairOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="hairOffsetXVal">0.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Y:</label>
+                            <input type="range" id="hairOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="hairOffsetYVal">0.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Z:</label>
+                            <input type="range" id="hairOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="hairOffsetZVal">0.00</span>
+                        </div>
                     </div>
-                    <div class="debug-row">
-                        <label>Y:</label>
-                        <input type="range" id="beardOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="beardOffsetYVal">0.00</span>
+                    <div class="debug-section">
+                        <h4>Beard Offset</h4>
+                        <div class="debug-row">
+                            <label>X:</label>
+                            <input type="range" id="beardOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="beardOffsetXVal">0.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Y:</label>
+                            <input type="range" id="beardOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="beardOffsetYVal">0.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Z:</label>
+                            <input type="range" id="beardOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="beardOffsetZVal">0.00</span>
+                        </div>
                     </div>
-                    <div class="debug-row">
-                        <label>Z:</label>
-                        <input type="range" id="beardOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="beardOffsetZVal">0.00</span>
+                    <div class="debug-section">
+                        <h4>Glasses Offset</h4>
+                        <div class="debug-row">
+                            <label>X:</label>
+                            <input type="range" id="glassesOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="glassesOffsetXVal">0.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Y:</label>
+                            <input type="range" id="glassesOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="glassesOffsetYVal">0.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Z:</label>
+                            <input type="range" id="glassesOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="glassesOffsetZVal">0.00</span>
+                        </div>
                     </div>
-                </div>
-                <div class="debug-section">
-                    <h4>Glasses Offset</h4>
-                    <div class="debug-row">
-                        <label>X:</label>
-                        <input type="range" id="glassesOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="glassesOffsetXVal">0.00</span>
+                    <div class="debug-section">
+                        <h4>Headwear Offset</h4>
+                        <div class="debug-row">
+                            <label>X:</label>
+                            <input type="range" id="headwearOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="headwearOffsetXVal">0.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Y:</label>
+                            <input type="range" id="headwearOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="headwearOffsetYVal">0.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Z:</label>
+                            <input type="range" id="headwearOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="headwearOffsetZVal">0.00</span>
+                        </div>
                     </div>
-                    <div class="debug-row">
-                        <label>Y:</label>
-                        <input type="range" id="glassesOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="glassesOffsetYVal">0.00</span>
+                    <div class="debug-section">
+                        <h4>Facewear Offset</h4>
+                        <div class="debug-row">
+                            <label>X:</label>
+                            <input type="range" id="facewearOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="facewearOffsetXVal">0.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Y:</label>
+                            <input type="range" id="facewearOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="facewearOffsetYVal">0.00</span>
+                        </div>
+                        <div class="debug-row">
+                            <label>Z:</label>
+                            <input type="range" id="facewearOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
+                            <span id="facewearOffsetZVal">0.00</span>
+                        </div>
                     </div>
-                    <div class="debug-row">
-                        <label>Z:</label>
-                        <input type="range" id="glassesOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="glassesOffsetZVal">0.00</span>
+                    <div class="debug-output">
+                        <button id="copyOffsets">Copy Offset Values</button>
+                        <pre id="offsetValues"></pre>
                     </div>
-                </div>
-                <div class="debug-section">
-                    <h4>Headwear Offset</h4>
-                    <div class="debug-row">
-                        <label>X:</label>
-                        <input type="range" id="headwearOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="headwearOffsetXVal">0.00</span>
-                    </div>
-                    <div class="debug-row">
-                        <label>Y:</label>
-                        <input type="range" id="headwearOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="headwearOffsetYVal">0.00</span>
-                    </div>
-                    <div class="debug-row">
-                        <label>Z:</label>
-                        <input type="range" id="headwearOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="headwearOffsetZVal">0.00</span>
-                    </div>
-                </div>
-                <div class="debug-section">
-                    <h4>Facewear Offset</h4>
-                    <div class="debug-row">
-                        <label>X:</label>
-                        <input type="range" id="facewearOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="facewearOffsetXVal">0.00</span>
-                    </div>
-                    <div class="debug-row">
-                        <label>Y:</label>
-                        <input type="range" id="facewearOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="facewearOffsetYVal">0.00</span>
-                    </div>
-                    <div class="debug-row">
-                        <label>Z:</label>
-                        <input type="range" id="facewearOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
-                        <span id="facewearOffsetZVal">0.00</span>
-                    </div>
-                </div>
-                <div class="debug-output">
-                    <button id="copyOffsets">Copy Values</button>
-                    <pre id="offsetValues"></pre>
                 </div>
             </div>
         `;
@@ -608,6 +705,37 @@ export class UIController {
                 width: 24px;
                 height: 24px;
                 line-height: 1;
+            }
+            .debug-tabs {
+                display: flex;
+                gap: 5px;
+                margin-bottom: 10px;
+            }
+            .debug-tab {
+                flex: 1;
+                padding: 8px;
+                background: #222;
+                border: 1px solid #333;
+                border-radius: 6px;
+                color: #888;
+                cursor: pointer;
+                font-size: 11px;
+                transition: all 0.2s;
+            }
+            .debug-tab:hover {
+                background: #2a2a2a;
+                color: #aaa;
+            }
+            .debug-tab.active {
+                background: var(--accent-pink);
+                border-color: var(--accent-pink);
+                color: white;
+            }
+            .debug-tab-content {
+                display: block;
+            }
+            .debug-tab-content.hidden {
+                display: none;
             }
             .debug-content {
                 padding: 15px;
@@ -656,6 +784,23 @@ export class UIController {
                 color: #aaa;
                 font-family: monospace;
             }
+            .debug-row input[type="color"] {
+                -webkit-appearance: none;
+                width: 32px;
+                height: 24px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                padding: 0;
+                background: none;
+            }
+            .debug-row input[type="color"]::-webkit-color-swatch-wrapper {
+                padding: 0;
+            }
+            .debug-row input[type="color"]::-webkit-color-swatch {
+                border: 1px solid #444;
+                border-radius: 4px;
+            }
             .debug-output {
                 margin-top: 10px;
                 padding-top: 10px;
@@ -696,6 +841,24 @@ export class UIController {
             toggle.textContent = content.classList.contains('collapsed') ? '+' : '−';
         });
 
+        // Tab switching
+        const tabs = panel.querySelectorAll('.debug-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Hide all tab content
+                panel.querySelectorAll('.debug-tab-content').forEach(c => c.classList.add('hidden'));
+                // Show selected tab content
+                const tabId = tab.dataset.tab;
+                document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+            });
+        });
+
+        // Setup light controls
+        this.setupLightControls();
+
         // Setup sliders for each category
         ['hair', 'beard', 'glasses', 'headwear', 'facewear'].forEach(category => {
             ['X', 'Y', 'Z'].forEach(axis => {
@@ -721,12 +884,149 @@ export class UIController {
             navigator.clipboard.writeText(pre.textContent);
             document.getElementById('copyOffsets').textContent = 'Copied!';
             setTimeout(() => {
-                document.getElementById('copyOffsets').textContent = 'Copy Values';
+                document.getElementById('copyOffsets').textContent = 'Copy Offset Values';
             }, 1500);
         });
 
         // Initial display
         this.updateOffsetDisplay();
+    }
+
+    setupLightControls() {
+        const scene = this.app.scene;
+        if (!scene || !scene.lights) return;
+
+        // Exposure
+        const exposureSlider = document.getElementById('lightExposure');
+        const exposureVal = document.getElementById('lightExposureVal');
+        exposureSlider.addEventListener('input', () => {
+            const value = parseFloat(exposureSlider.value);
+            exposureVal.textContent = value.toFixed(2);
+            scene.renderer.toneMappingExposure = value;
+            this.updateLightDisplay();
+        });
+
+        // Ambient
+        const ambientSlider = document.getElementById('lightAmbient');
+        const ambientVal = document.getElementById('lightAmbientVal');
+        ambientSlider.addEventListener('input', () => {
+            const value = parseFloat(ambientSlider.value);
+            ambientVal.textContent = value.toFixed(2);
+            scene.lights.ambient.intensity = value;
+            this.updateLightDisplay();
+        });
+
+        // Key light
+        const keySlider = document.getElementById('lightKey');
+        const keyVal = document.getElementById('lightKeyVal');
+        const keyColor = document.getElementById('lightKeyColor');
+        keySlider.addEventListener('input', () => {
+            const value = parseFloat(keySlider.value);
+            keyVal.textContent = value.toFixed(2);
+            scene.lights.key.intensity = value;
+            this.updateLightDisplay();
+        });
+        keyColor.addEventListener('input', () => {
+            scene.lights.key.color.set(keyColor.value);
+            this.updateLightDisplay();
+        });
+
+        // Fill light
+        const fillSlider = document.getElementById('lightFill');
+        const fillVal = document.getElementById('lightFillVal');
+        const fillColor = document.getElementById('lightFillColor');
+        fillSlider.addEventListener('input', () => {
+            const value = parseFloat(fillSlider.value);
+            fillVal.textContent = value.toFixed(2);
+            scene.lights.fill.intensity = value;
+            this.updateLightDisplay();
+        });
+        fillColor.addEventListener('input', () => {
+            scene.lights.fill.color.set(fillColor.value);
+            this.updateLightDisplay();
+        });
+
+        // Rim light
+        const rimSlider = document.getElementById('lightRim');
+        const rimVal = document.getElementById('lightRimVal');
+        const rimColor = document.getElementById('lightRimColor');
+        rimSlider.addEventListener('input', () => {
+            const value = parseFloat(rimSlider.value);
+            rimVal.textContent = value.toFixed(2);
+            scene.lights.rim.intensity = value;
+            this.updateLightDisplay();
+        });
+        rimColor.addEventListener('input', () => {
+            scene.lights.rim.color.set(rimColor.value);
+            this.updateLightDisplay();
+        });
+
+        // Accent rim
+        const accentSlider = document.getElementById('lightAccent');
+        const accentVal = document.getElementById('lightAccentVal');
+        const accentColor = document.getElementById('lightAccentColor');
+        accentSlider.addEventListener('input', () => {
+            const value = parseFloat(accentSlider.value);
+            accentVal.textContent = value.toFixed(2);
+            scene.lights.accent.intensity = value;
+            this.updateLightDisplay();
+        });
+        accentColor.addEventListener('input', () => {
+            scene.lights.accent.color.set(accentColor.value);
+            this.updateLightDisplay();
+        });
+
+        // Front fill
+        const frontSlider = document.getElementById('lightFront');
+        const frontVal = document.getElementById('lightFrontVal');
+        frontSlider.addEventListener('input', () => {
+            const value = parseFloat(frontSlider.value);
+            frontVal.textContent = value.toFixed(2);
+            scene.lights.front.intensity = value;
+            this.updateLightDisplay();
+        });
+
+        // Hair light
+        const hairSlider = document.getElementById('lightHair');
+        const hairVal = document.getElementById('lightHairVal');
+        hairSlider.addEventListener('input', () => {
+            const value = parseFloat(hairSlider.value);
+            hairVal.textContent = value.toFixed(2);
+            scene.lights.hair.intensity = value;
+            this.updateLightDisplay();
+        });
+
+        // Copy lighting button
+        document.getElementById('copyLighting').addEventListener('click', () => {
+            const pre = document.getElementById('lightValues');
+            navigator.clipboard.writeText(pre.textContent);
+            document.getElementById('copyLighting').textContent = 'Copied!';
+            setTimeout(() => {
+                document.getElementById('copyLighting').textContent = 'Copy Light Values';
+            }, 1500);
+        });
+
+        // Initial display
+        this.updateLightDisplay();
+    }
+
+    updateLightDisplay() {
+        const scene = this.app.scene;
+        if (!scene || !scene.lights) return;
+
+        const getHex = (light) => '#' + light.color.getHexString();
+
+        const output = `// Light settings:
+exposure: ${scene.renderer.toneMappingExposure.toFixed(2)}
+ambient: ${scene.lights.ambient.intensity.toFixed(2)}
+key: ${scene.lights.key.intensity.toFixed(2)}, "${getHex(scene.lights.key)}"
+fill: ${scene.lights.fill.intensity.toFixed(2)}, "${getHex(scene.lights.fill)}"
+rim: ${scene.lights.rim.intensity.toFixed(2)}, "${getHex(scene.lights.rim)}"
+accent: ${scene.lights.accent.intensity.toFixed(2)}, "${getHex(scene.lights.accent)}"
+front: ${scene.lights.front.intensity.toFixed(2)}
+hair: ${scene.lights.hair.intensity.toFixed(2)}`;
+
+        document.getElementById('lightValues').textContent = output;
     }
 
     updateAssetOffset(category, axis, value) {
