@@ -121,32 +121,28 @@ class AvatarCreatorApp {
             }
         }
 
-        // Clothing strategy:
-        // - Female: use outfits (all 111 outfits are female-specific)
-        // - Male: use individual pieces (top + bottom + footwear are neutral)
+        // Try to load a random outfit (both genders now have outfits)
+        const outfits = this.getAssetsForCategory('outfit');
+        console.log(`Found ${outfits.length} outfits for ${this.currentGender}`);
 
-        if (this.currentGender === 'female') {
-            // Female gets an outfit
-            const outfits = this.getAssetsForCategory('outfit');
-            console.log(`Found ${outfits.length} outfits for female`);
-
-            let outfitLoaded = false;
-            const triedOutfits = new Set();
-            for (let i = 0; i < Math.min(5, outfits.length) && !outfitLoaded; i++) {
-                const randomOutfit = outfits[Math.floor(Math.random() * outfits.length)];
-                if (triedOutfits.has(randomOutfit.name)) continue;
-                triedOutfits.add(randomOutfit.name);
-                try {
-                    await this.avatar.loadAsset('outfit', randomOutfit.name);
-                    this.selectedAssets['outfit'] = randomOutfit.name;
-                    outfitLoaded = true;
-                } catch (error) {
-                    console.warn(`Outfit ${randomOutfit.name} failed`);
-                }
+        let outfitLoaded = false;
+        const triedOutfits = new Set();
+        for (let i = 0; i < Math.min(5, outfits.length) && !outfitLoaded; i++) {
+            const randomOutfit = outfits[Math.floor(Math.random() * outfits.length)];
+            if (triedOutfits.has(randomOutfit.name)) continue;
+            triedOutfits.add(randomOutfit.name);
+            try {
+                await this.avatar.loadAsset('outfit', randomOutfit.name);
+                this.selectedAssets['outfit'] = randomOutfit.name;
+                outfitLoaded = true;
+            } catch (error) {
+                console.warn(`Outfit ${randomOutfit.name} failed`);
             }
-        } else {
-            // Male uses individual pieces (no male outfits exist)
-            console.log('Male avatar: using individual pieces');
+        }
+
+        // Fallback to individual pieces if no outfit loaded
+        if (!outfitLoaded) {
+            console.log('No outfit loaded, using individual pieces');
             await this.loadRandomIndividualClothing();
         }
 
@@ -302,19 +298,14 @@ class AvatarCreatorApp {
             }
         }
 
-        // Clothing: Female gets outfits, Male gets individual pieces
-        // (All 111 outfits in the catalog are female-specific)
-        if (this.currentGender === 'female') {
-            // Female: use outfit
-            const outfits = this.getAssetsForCategory('outfit');
-            if (outfits.length > 0) {
-                const randomOutfit = outfits[Math.floor(Math.random() * outfits.length)];
-                this.selectAsset('outfit', randomOutfit.name);
-            }
+        // Try outfit first (both genders have outfits now)
+        const outfits = this.getAssetsForCategory('outfit');
+        if (outfits.length > 0) {
+            const randomOutfit = outfits[Math.floor(Math.random() * outfits.length)];
+            this.selectAsset('outfit', randomOutfit.name);
         } else {
-            // Male: use individual pieces (no male outfits exist)
-            this.selectAsset('outfit', 'none'); // Clear any outfit first
-
+            // Fallback to individual pieces if no outfits available
+            this.selectAsset('outfit', 'none');
             for (const category of ['top', 'bottom', 'footwear']) {
                 const assets = this.getAssetsForCategory(category);
                 if (assets.length > 0) {
