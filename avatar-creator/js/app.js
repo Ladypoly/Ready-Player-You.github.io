@@ -174,9 +174,26 @@ class AvatarCreatorApp {
             if (category === 'beard' && this.currentGender === 'female') {
                 return false;
             }
+
+            // Check metadata gender
             if (item.gender && item.gender !== 'neutral' && item.gender !== this.currentGender) {
                 return false;
             }
+
+            // Also check asset name for gender hints (outfit-f-, outfit-m-, -v2-f, -v2-m)
+            const name = item.name.toLowerCase();
+            if (this.currentGender === 'male') {
+                // Exclude female-specific assets
+                if (name.includes('-f-') || name.endsWith('-f') || name.includes('-v2-f')) {
+                    return false;
+                }
+            } else if (this.currentGender === 'female') {
+                // Exclude male-specific assets
+                if (name.includes('-m-') || name.endsWith('-m') || name.includes('-v2-m')) {
+                    return false;
+                }
+            }
+
             return true;
         });
     }

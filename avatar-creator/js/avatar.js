@@ -12,7 +12,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 export class AvatarManager {
     constructor(scene, catalog) {
-        this.scene = scene;
+        this.sceneManager = scene;
+        this.threeScene = scene.scene; // Direct reference to THREE.Scene
         this.catalog = catalog;
         this.loader = new GLTFLoader();
 
@@ -59,7 +60,7 @@ export class AvatarManager {
         // Remove existing avatar
         if (this.currentAvatar) {
             console.log('Removing existing avatar from scene');
-            this.scene.scene.remove(this.currentAvatar);
+            this.threeScene.remove(this.currentAvatar);
             this.disposeObject(this.currentAvatar);
             this.currentAvatar = null;
         }
@@ -108,7 +109,7 @@ export class AvatarManager {
             });
 
             // Add to scene
-            this.scene.scene.add(this.currentAvatar);
+            this.threeScene.add(this.currentAvatar);
 
             // Determine gender from name
             this.currentGender = avatarName.includes('female') ? 'female' : 'male';
