@@ -531,6 +531,42 @@ export class UIController {
                         <span id="glassesOffsetZVal">0.00</span>
                     </div>
                 </div>
+                <div class="debug-section">
+                    <h4>Headwear Offset</h4>
+                    <div class="debug-row">
+                        <label>X:</label>
+                        <input type="range" id="headwearOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
+                        <span id="headwearOffsetXVal">0.00</span>
+                    </div>
+                    <div class="debug-row">
+                        <label>Y:</label>
+                        <input type="range" id="headwearOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
+                        <span id="headwearOffsetYVal">0.00</span>
+                    </div>
+                    <div class="debug-row">
+                        <label>Z:</label>
+                        <input type="range" id="headwearOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
+                        <span id="headwearOffsetZVal">0.00</span>
+                    </div>
+                </div>
+                <div class="debug-section">
+                    <h4>Facewear Offset</h4>
+                    <div class="debug-row">
+                        <label>X:</label>
+                        <input type="range" id="facewearOffsetX" min="-0.5" max="0.5" step="0.01" value="0">
+                        <span id="facewearOffsetXVal">0.00</span>
+                    </div>
+                    <div class="debug-row">
+                        <label>Y:</label>
+                        <input type="range" id="facewearOffsetY" min="-0.5" max="0.5" step="0.01" value="0">
+                        <span id="facewearOffsetYVal">0.00</span>
+                    </div>
+                    <div class="debug-row">
+                        <label>Z:</label>
+                        <input type="range" id="facewearOffsetZ" min="-0.5" max="0.5" step="0.01" value="0">
+                        <span id="facewearOffsetZVal">0.00</span>
+                    </div>
+                </div>
                 <div class="debug-output">
                     <button id="copyOffsets">Copy Values</button>
                     <pre id="offsetValues"></pre>
@@ -575,7 +611,7 @@ export class UIController {
             }
             .debug-content {
                 padding: 15px;
-                max-height: 400px;
+                max-height: 500px;
                 overflow-y: auto;
             }
             .debug-content.collapsed {
@@ -661,7 +697,7 @@ export class UIController {
         });
 
         // Setup sliders for each category
-        ['hair', 'beard', 'glasses'].forEach(category => {
+        ['hair', 'beard', 'glasses', 'headwear', 'facewear'].forEach(category => {
             ['X', 'Y', 'Z'].forEach(axis => {
                 const slider = document.getElementById(`${category}Offset${axis}`);
                 const valueDisplay = document.getElementById(`${category}Offset${axis}Val`);
@@ -704,8 +740,13 @@ export class UIController {
             this.app.avatar.debugOffsets = {
                 hair: { x: 0, y: 0, z: 0 },
                 beard: { x: 0, y: 0, z: 0 },
-                glasses: { x: 0, y: 0, z: 0 }
+                glasses: { x: 0, y: 0, z: 0 },
+                headwear: { x: 0, y: 0, z: 0 },
+                facewear: { x: 0, y: 0, z: 0 }
             };
+        }
+        if (!this.app.avatar.debugOffsets[category]) {
+            this.app.avatar.debugOffsets[category] = { x: 0, y: 0, z: 0 };
         }
         this.app.avatar.debugOffsets[category][axis] = value;
     }
@@ -719,7 +760,9 @@ export class UIController {
         const output = `// Correct offset values:
 hair: { x: ${getVal('hair', 'X')}, y: ${getVal('hair', 'Y')}, z: ${getVal('hair', 'Z')} }
 beard: { x: ${getVal('beard', 'X')}, y: ${getVal('beard', 'Y')}, z: ${getVal('beard', 'Z')} }
-glasses: { x: ${getVal('glasses', 'X')}, y: ${getVal('glasses', 'Y')}, z: ${getVal('glasses', 'Z')} }`;
+glasses: { x: ${getVal('glasses', 'X')}, y: ${getVal('glasses', 'Y')}, z: ${getVal('glasses', 'Z')} }
+headwear: { x: ${getVal('headwear', 'X')}, y: ${getVal('headwear', 'Y')}, z: ${getVal('headwear', 'Z')} }
+facewear: { x: ${getVal('facewear', 'X')}, y: ${getVal('facewear', 'Y')}, z: ${getVal('facewear', 'Z')} }`;
 
         document.getElementById('offsetValues').textContent = output;
     }
